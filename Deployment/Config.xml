@@ -2,11 +2,8 @@
 <Parameters>
     <TenantAdmin>https://mybdodev-admin.sharepoint.com</TenantAdmin>
     <AdminAccount>dpille@mybdodev.onmicrosoft.com</AdminAccount>
-    <HomeSiteUrl>https://mybdodev.sharepoint.com/sites/Site1</HomeSiteUrl>
-    <HomeSiteTitle>BMicrosoftW</HomeSiteTitle>
-    <ExtractedTemplatePath>C:\Dimple\ClouDev-AusPost-LMS-Updated\Derhalli\Deployment\Deployment\template1\template.xml</ExtractedTemplatePath>
-    <TemplateUrl>https://mybdodev.sharepoint.com/sites/Site7</TemplateUrl>
-    <TemplateTitle>BMicrosoftW</TemplateTitle>
+    <SiteUrl>https://mybdodev.sharepoint.com/sites/adiddas</SiteUrl>
+    <SiteTitle>adiddas</SiteTitle>
     <FullControlPermission>Full Control</FullControlPermission>
     <ReadPermission>Read</ReadPermission>
 </Parameters>

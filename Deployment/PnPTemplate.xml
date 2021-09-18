@@ -1,26 +1,17 @@
 <?xml version="1.0"?>
-<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
-  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.20.2004.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-64BE7FBE65A94A3F84A348512D11E87C">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-64BE7FBE65A94A3F84A348512D11E87C" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2021/03/ProvisioningSchema">
+  <pnp:Preferences Generator="PnP.Framework, Version=1.6.0.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-D042546A9C2744E9AB59410D0D26CFE5">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-D042546A9C2744E9AB59410D0D26CFE5" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
       <pnp:WebSettings RequestAccessEmail="" NoCrawl="false" WelcomePage="SitePages/Home.aspx" SiteLogo="" AlternateCSS="" MasterPageUrl="{masterpagecatalog}/seattle.master" CustomMasterPageUrl="{masterpagecatalog}/seattle.master" CommentsOnSitePagesDisabled="false" QuickLaunchEnabled="true" SearchScope="DefaultScope" SearchBoxInNavBar="Inherit" />
       <pnp:SiteSettings AllowDesigner="true" SearchBoxInNavBar="Inherit" SearchCenterUrl="" />
       <pnp:RegionalSettings AdjustHijriDays="0" AlternateCalendarType="None" CalendarType="Gregorian" Collation="25" FirstDayOfWeek="Sunday" FirstWeekOfYear="0" LocaleId="1033" ShowWeeks="false" Time24="false" TimeZone="10" WorkDayEndHour="5:00PM" WorkDays="62" WorkDayStartHour="8:00AM" />
       <pnp:PropertyBagEntries>
         <pnp:PropertyBagEntry Key="contenttypessynctimestampversion" Value="1" Overwrite="false" />
         <pnp:PropertyBagEntry Key="UseFastCloneFromSiteMaster" Value="FALSE" Overwrite="false" />
-        <pnp:PropertyBagEntry Key="contenttypesusagebackfillversion" Value="2" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="contenttypesusagebackfillversion" Value="3" Overwrite="false" />
       </pnp:PropertyBagEntries>
-      <pnp:Security AssociatedOwnerGroup="Site1 Owners" AssociatedMemberGroup="Site1 Members" AssociatedVisitorGroup="Site1 Visitors">
-        <pnp:AdditionalOwners>
-          <pnp:User Name="i:0#.f|membership|alexw@mybdodev.onmicrosoft.com" />
-          <pnp:User Name="i:0#.f|membership|dpille@mybdodev.onmicrosoft.com" />
-          <pnp:User Name="i:0#.f|membership|mderhalli@mybdodev.onmicrosoft.com" />
-        </pnp:AdditionalOwners>
-        <pnp:AdditionalVisitors>
-          <pnp:User Name="i:0#.f|membership|adelev@mybdodev.onmicrosoft.com" />
-        </pnp:AdditionalVisitors>
-        <pnp:Permissions />
+      <pnp:Security AssociatedOwnerGroup="{groupsitetitle} Owners" AssociatedMemberGroup="{groupsitetitle} Members" AssociatedVisitorGroup="{groupsitetitle} Visitors">       
       </pnp:Security>
       <pnp:Navigation AddNewPagesToNavigation="true" CreateFriendlyUrlsForNewPages="true">
         <pnp:GlobalNavigation NavigationType="Structural">
@@ -29,16 +20,11 @@
         <pnp:CurrentNavigation NavigationType="StructuralLocal">
           <pnp:StructuralNavigation RemoveExistingNodes="true">
             <pnp:NavigationNode Title="Home" Url="{site}" />
-            <pnp:NavigationNode Title="IT-Operations" Url="{site}/SitePages/IT-Operations.aspx" IsExternal="true" />
-            <pnp:NavigationNode Title="Networking" Url="{site}/SitePages/Networking.aspx" IsExternal="true" />
+            <pnp:NavigationNode Title="IT-Operations" Url="{site}/SitePages/IT-Operations.aspx" />
+            <pnp:NavigationNode Title="Networking" Url="{site}/SitePages/Networking.aspx" />
             <pnp:NavigationNode Title="Systems &amp; Apps" Url="{site}/SitePages/Systems-&amp;-Apps.aspx" />
-            <pnp:NavigationNode Title="Procedures" Url="{site}/SitePages/Procedures.aspx" IsExternal="true" />
+            <pnp:NavigationNode Title="Procedures" Url="{site}/SitePages/Procedures.aspx" />
             <pnp:NavigationNode Title="IT Service Catalogue" Url="{site}/SitePages/IT-Service-Catalog.aspx" />
-            <pnp:NavigationNode Title="Site contents" Url="{site}/_layouts/15/viewlsts.aspx" IsExternal="true" />
-            <pnp:NavigationNode Title="Documents" Url="{site}/Shared Documents/Forms/AllItems.aspx" />
-            <pnp:NavigationNode Title="Recent" Url="" IsExternal="true">
-              <pnp:NavigationNode Title="IT Operations Gallery" Url="{site}/IT Operations Gallery/Forms/AllItems.aspx" />
-            </pnp:NavigationNode>
           </pnp:StructuralNavigation>
         </pnp:CurrentNavigation>
       </pnp:Navigation>
@@ -47,11 +33,12 @@
         <Field ID="{78A0FC1E-B294-4E4D-9619-E41148388311}" Name="Template" StaticName="Template" DisplayName="Template" Type="URL" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ShowInVersionHistory="FALSE" Hidden="TRUE" />
         <Field ID="{cb19284a-cde7-4570-a980-1dab8bd74470}" Name="_ExtendedDescription" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_ExtendedDescription" DisplayName="Description" Group="Extended Columns" RichText="TRUE" ShowInEditForm="FALSE" RichTextMode="Compatible" CanToggleHidden="TRUE" Type="Note" />
         <Field ID="{AC9CE95B-F081-4B8A-BB19-2F4427D44674}" Name="_ExpirationDate" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_ExpirationDate" Hidden="TRUE" Group="_Hidden" ReadOnly="TRUE" Type="Lookup" List="Docs" ShowField="ExpirationDate" DisplayName="Expiration Date" FromBaseType="TRUE" DisplaceOnUpgrade="TRUE" FieldRef="ID" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" />
+        <Field ID="{08D89A66-4634-42B8-9D5A-0C27395A48B3}" Name="TriggerFlowInfo" SourceID="http://schemas.microsoft.com/sharepoint/v3" Required="FALSE" ShowInFileDlg="FALSE" Hidden="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ReadOnlyEnforced="TRUE" DisplaceOnUpgrade="TRUE" StaticName="TriggerFlowInfo" Type="Text" DisplayName="Trigger Flow Info" Sortable="FALSE" />
         <Field ID="{ff41708b-e251-4237-a060-bea44657e8dc}" Name="_SPAssetFolderId" StaticName="_SPAssetFolderId" DisplayName="Asset Folder Id" Type="Number" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ReadOnly="TRUE" AllowDeletion="FALSE" Hidden="TRUE" />
         <Field ID="{D1E7D8B0-78D7-4728-8C72-219E771C3ED7}" Name="SpaceContent" StaticName="SpaceContent" DisplayName="Space Theme Content" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ShowInVersionHistory="FALSE" RichText="TRUE" RichTextMode="FullHtml" Hidden="TRUE" />
       </pnp:SiteFields>
       <pnp:ContentTypes>
-        <pnp:ContentType ID="0x0101009D1CB255DA76424F860D91F20E6C41180043153F945E98468297E67C3EEE43AB70" Name="Space" Description="Create a new SPM." Group="Document Content Types" Sealed="true" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+        <pnp:ContentType ID="0x0101009D1CB255DA76424F860D91F20E6C41180043153F945E98468297E67C3EEE43AB70" Name="Space" Description="Create a new SPM." Group="Document Content Types" Sealed="true" NewFormUrl="" EditFormUrl="" DisplayFormUrl="" UpdateChildren="false">
           <pnp:FieldRefs>
             <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" UpdateChildren="true" />
             <pnp:FieldRef ID="5f47e085-2150-41dc-b661-442f3027f552" Name="SelectFilename" UpdateChildren="true" />
@@ -89,7 +76,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{0933150C-C046-4A06-8ABD-ED6AD2ADE9E3}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/Shared Documents/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+            <View Name="{E696B690-6AE2-4196-9696-754F26CBD1B2}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/Shared Documents/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="FileLeafRef" />
@@ -106,8 +93,8 @@
             </View>
           </pnp:Views>
           <pnp:Fields>
-            <Field ID="{d1cff744-ba61-4189-94d6-97d0a9eb4f6a}" Type="Text" DisplayName="Tags" Name="MediaServiceAutoTags" Group="_Hidden" Hidden="FALSE" Sealed="TRUE" ReadOnly="TRUE" ShowInNewForm="FALSE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInListSettings="FALSE" Viewable="FALSE" Json="FALSE" SourceID="{{listid:Documents}}" StaticName="MediaServiceAutoTags" ColName="nvarchar13" RowOrdinal="0" />
-            <Field ID="{67aff0cf-8e19-43f2-9987-be89075e1467}" Type="Note" DisplayName="Extracted Text" Name="MediaServiceOCR" Group="_Hidden" Hidden="FALSE" Sealed="TRUE" ReadOnly="TRUE" ShowInNewForm="FALSE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInListSettings="FALSE" Viewable="FALSE" Json="FALSE" SourceID="{{listid:Documents}}" StaticName="MediaServiceOCR" ColName="ntext5" RowOrdinal="0" />
+            <Field ID="{d1cff744-ba61-4189-94d6-97d0a9eb4f6a}" Type="Text" DisplayName="Tags" Name="MediaServiceAutoTags" Group="_Hidden" Hidden="FALSE" Sealed="TRUE" ReadOnly="TRUE" ShowInNewForm="FALSE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInListSettings="FALSE" Viewable="FALSE" Json="FALSE" SourceID="{{listid:Documents}}" StaticName="MediaServiceAutoTags" ColName="nvarchar14" RowOrdinal="0" />
+            <Field ID="{67aff0cf-8e19-43f2-9987-be89075e1467}" Type="Note" DisplayName="Extracted Text" Name="MediaServiceOCR" Group="_Hidden" Hidden="FALSE" Sealed="TRUE" ReadOnly="TRUE" ShowInNewForm="FALSE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInListSettings="FALSE" Viewable="FALSE" Json="FALSE" SourceID="{{listid:Documents}}" StaticName="MediaServiceOCR" ColName="ntext3" RowOrdinal="0" />
           </pnp:Fields>
           <pnp:FieldRefs>
             <pnp:FieldRef ID="cb19284a-cde7-4570-a980-1dab8bd74470" Name="_ExtendedDescription" DisplayName="Description" />
@@ -127,7 +114,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0102" Default="true" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{036D95FC-90AF-48E3-8D9F-AF80798377CD}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="CALENDAR" RecurrenceRowset="TRUE" DisplayName="Calendar" Url="{site}/Lists/Events/calendar.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=47">
+            <View Name="{527E7BAB-9084-4CC9-BF8C-04886FD43CA1}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="CALENDAR" RecurrenceRowset="TRUE" DisplayName="Calendar" Url="{site}/Lists/Events/calendar.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=47">
               <Query>
                 <Where>
                   <DateRangesOverlap>
@@ -163,7 +150,7 @@
                 <FieldRef Name="Location" Type="CalendarDayLocation" />
               </ViewData>
             </View>
-            <View Name="{FDA6D0E4-5BB2-4DB9-A8B3-35C1FC7F8C29}" MobileView="TRUE" Type="HTML" DisplayName="All Events" Url="{site}/Lists/Events/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=47">
+            <View Name="{E2DB9B2E-092B-4196-9EB4-A8204C630DF9}" MobileView="TRUE" Type="HTML" DisplayName="All Events" Url="{site}/Lists/Events/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="EventDate" />
@@ -181,7 +168,7 @@
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
             </View>
-            <View Name="{E7935A02-2DDF-4322-8F00-79A59F5E7841}" MobileView="TRUE" Type="HTML" DisplayName="Current Events" Url="{site}/Lists/Events/MyItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=47">
+            <View Name="{A1020206-337E-4678-A393-39DF4992FBA0}" MobileView="TRUE" Type="HTML" DisplayName="Current Events" Url="{site}/Lists/Events/MyItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=47">
               <Query>
                 <Where>
                   <DateRangesOverlap>
@@ -231,7 +218,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x010100F8EF98760CBA4A94994F13BA881038FA" Default="true" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{C2998DF0-B81A-4BDD-B36F-E416E4F60149}" MobileView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/FormServerTemplates/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+            <View Name="{D6537C4F-56E4-448E-965C-48B670F00C58}" MobileView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/FormServerTemplates/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="FileLeafRef" />
@@ -246,7 +233,7 @@
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
             </View>
-            <View Name="{4A722C4D-2A8A-4681-AF98-2C56725569A2}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Forms" Url="{site}/FormServerTemplates/Forms/All Forms.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+            <View Name="{83C97680-87E6-4352-8480-2B4DA370A447}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Forms" Url="{site}/FormServerTemplates/Forms/All Forms.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
               <Query>
                 <GroupBy Collapse="FALSE">
                   <FieldRef Name="FormCategory" />
@@ -285,13 +272,44 @@
             <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
           </pnp:FieldRefs>
         </pnp:ListInstance>
+        <pnp:ListInstance Title="Home Library" Description="" DocumentTemplate="{site}/Home Library/Forms/template.dotx" TemplateType="101" Url="Home Library" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/Home Library/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/Home Library/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/Home Library/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{2B277204-8174-4626-8C9A-10D4A35AF34E}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/Home Library/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="cb19284a-cde7-4570-a980-1dab8bd74470" Name="_ExtendedDescription" DisplayName="Description" />
+            <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
+            <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://canadaeast0.pushnp.svc.ms/notifications?token=452e7e23-39b6-4170-9ccf-d0fcedacd96f" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
         <pnp:ListInstance Title="IP Address Schema" Description="All LAN Subnet IP and VLAN details" DocumentTemplate="" TemplateType="100" Url="Lists/IP Address Schema" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/IP Address Schema/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/IP Address Schema/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/IP Address Schema/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{1EFB4644-EDCF-49A5-85B2-93A8BE5E557C}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/IP Address Schema/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{B2476BE4-DE68-4049-9604-5AFE98222A21}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/IP Address Schema/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -307,7 +325,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{BA10D904-57B4-45DA-A3AD-770AA3022410}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/ISP Data/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{B81ED300-AE95-48D3-A70A-B18316ABC8E2}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/ISP Data/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -318,15 +336,12 @@
           </pnp:Views>
         </pnp:ListInstance>
         <pnp:ListInstance Title="IT Operations" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/IT Operations" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/IT Operations/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/IT Operations/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/IT Operations/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
-          <pnp:PropertyBagEntries>
-            <pnp:PropertyBagEntry Key="wte_Source" Value="https://mybdodev.sharepoint.com/sites/Site1/Lists/Procedures/AllItems.aspx" Overwrite="false" />
-          </pnp:PropertyBagEntries>
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{A4B88C2A-D47B-4FB5-9480-02094C25475F}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/IT Operations/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{18A62219-D7D9-45A9-9676-616FCD7D4864}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/IT Operations/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -334,20 +349,20 @@
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
-              <CustomFormatter><![CDATA[]]></CustomFormatter>
+              <CustomFormatter />
             </View>
           </pnp:Views>
           <pnp:Fields>
             <Field AppendOnly="FALSE" DisplayName="Content" Format="Dropdown" IsModern="TRUE" IsolateStyles="TRUE" Name="Content" RichText="TRUE" RichTextMode="FullHtml" Title="Content" Type="Note" ID="{ed08ab0a-30c4-4e0b-ad9c-45b9d2818460}" StaticName="Content" ColName="ntext2" RowOrdinal="0" SourceID="{{listid:IT Operations}}" />
           </pnp:Fields>
         </pnp:ListInstance>
-        <pnp:ListInstance Title="IT Operations Gallery" Description="" DocumentTemplate="{site}/IT Operations Gallery/Forms/template.dotx" TemplateType="101" Url="IT Operations Gallery" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/IT Operations Gallery/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/IT Operations Gallery/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/IT Operations Gallery/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+        <pnp:ListInstance Title="IT Operations Gallery" Description="" DocumentTemplate="{site}/IT Operations Gallery/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="IT Operations Gallery" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/IT Operations Gallery/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/IT Operations Gallery/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/IT Operations Gallery/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{DEF6987F-1A9F-4EA1-97B7-6398E76F6654}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/IT Operations Gallery/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+            <View Name="{5E21F765-1525-4BFE-8FD0-C226A891E7C6}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/IT Operations Gallery/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="FileLeafRef" />
@@ -361,15 +376,15 @@
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
-              <CustomFormatter><![CDATA[{
+              <CustomFormatter>{
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json"
-}]]></CustomFormatter>
+}</CustomFormatter>
               <ViewType2>TILES</ViewType2>
             </View>
           </pnp:Views>
           <pnp:Fields>
-            <Field ID="{d1cff744-ba61-4189-94d6-97d0a9eb4f6a}" Type="Text" DisplayName="Tags" Name="MediaServiceAutoTags" Group="_Hidden" Hidden="FALSE" Sealed="TRUE" ReadOnly="TRUE" ShowInNewForm="FALSE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInListSettings="FALSE" Viewable="FALSE" Json="FALSE" SourceID="{{listid:IT Operations Gallery}}" StaticName="MediaServiceAutoTags" ColName="nvarchar13" RowOrdinal="0" />
-            <Field ID="{67aff0cf-8e19-43f2-9987-be89075e1467}" Type="Note" DisplayName="Extracted Text" Name="MediaServiceOCR" Group="_Hidden" Hidden="FALSE" Sealed="TRUE" ReadOnly="TRUE" ShowInNewForm="FALSE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInListSettings="FALSE" Viewable="FALSE" Json="FALSE" SourceID="{{listid:IT Operations Gallery}}" StaticName="MediaServiceOCR" ColName="ntext5" RowOrdinal="0" />
+            <Field ID="{d1cff744-ba61-4189-94d6-97d0a9eb4f6a}" Type="Text" DisplayName="Tags" Name="MediaServiceAutoTags" Group="_Hidden" Hidden="FALSE" Sealed="TRUE" ReadOnly="TRUE" ShowInNewForm="FALSE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInListSettings="FALSE" Viewable="FALSE" Json="FALSE" SourceID="{{listid:IT Operations Gallery}}" StaticName="MediaServiceAutoTags" ColName="nvarchar14" RowOrdinal="0" />
+            <Field ID="{67aff0cf-8e19-43f2-9987-be89075e1467}" Type="Note" DisplayName="Extracted Text" Name="MediaServiceOCR" Group="_Hidden" Hidden="FALSE" Sealed="TRUE" ReadOnly="TRUE" ShowInNewForm="FALSE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInListSettings="FALSE" Viewable="FALSE" Json="FALSE" SourceID="{{listid:IT Operations Gallery}}" StaticName="MediaServiceOCR" ColName="ntext3" RowOrdinal="0" />
           </pnp:Fields>
           <pnp:FieldRefs>
             <pnp:FieldRef ID="cb19284a-cde7-4570-a980-1dab8bd74470" Name="_ExtendedDescription" DisplayName="Description" />
@@ -383,7 +398,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{7D79FF86-3A47-46B1-B0F7-D6E33D1DDEC7}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/IT Ops Systems/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{F84791F5-E9DB-477A-A290-DDC3E306B824}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/IT Ops Systems/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -402,7 +417,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{D6E97982-F743-41C4-B7DD-D0FEFA9ADB1A}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/MP  IT Service Catalogue/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{6D040924-DCBC-4BF3-B6E6-6CCE22C48ACE}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/MP  IT Service Catalogue/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="Title" />
@@ -447,7 +462,7 @@
               <JSLink>clienttemplates.js</JSLink>
               <CustomFormatter />
             </View>
-            <View Name="{17153887-12CF-4703-BCB1-7DC688277F45}" MobileView="TRUE" Type="HTML" DisplayName="Kingston Apps" Url="{site}/Lists/MP  IT Service Catalogue/Kingston Apps.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{AC2C38E7-E495-47ED-8BA2-C9579DA5B755}" MobileView="TRUE" Type="HTML" DisplayName="Kingston Apps" Url="{site}/Lists/MP  IT Service Catalogue/Kingston Apps.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="LinkTitle" />
@@ -493,7 +508,7 @@
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
             </View>
-            <View Name="{05E09BF8-00F6-4C4D-97FA-41EE4000A057}" MobileView="TRUE" Type="HTML" DisplayName="Country Roads Apps" Url="{site}/Lists/MP  IT Service Catalogue/Country Roads Apps.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{F53B263F-4AED-41A1-B993-8A2E08A48DD3}" MobileView="TRUE" Type="HTML" DisplayName="Country Roads Apps" Url="{site}/Lists/MP  IT Service Catalogue/Country Roads Apps.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <Where>
                   <Eq>
@@ -726,15 +741,12 @@
           </pnp:Fields>
         </pnp:ListInstance>
         <pnp:ListInstance Title="IT Services" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/IT Services" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/IT Services/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/IT Services/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/IT Services/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
-          <pnp:PropertyBagEntries>
-            <pnp:PropertyBagEntry Key="wte_Source" Value="https://mybdodev.sharepoint.com/sites/Site1/Lists/Procedures/AllItems.aspx" Overwrite="false" />
-          </pnp:PropertyBagEntries>
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{CDD87734-E183-4209-B3F8-67C3B29B4582}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/IT Services/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{80A01CDF-D2E0-4483-96BF-20E454F2F6E7}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/IT Services/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -742,7 +754,7 @@
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
-              <CustomFormatter><![CDATA[]]></CustomFormatter>
+              <CustomFormatter />
             </View>
           </pnp:Views>
           <pnp:Fields>
@@ -758,7 +770,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{1A7BBC0A-CA39-4079-A552-5E4E77076D28}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/IT Workplan/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{655ECAD9-3170-4E72-AFF3-71D877EB2BE4}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/IT Workplan/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -840,7 +852,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{4A2BE4F1-11CB-4F00-94D1-61727C8B6288}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Network Equipment/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{DD4EB2FE-7995-410E-87A6-E6A552ED2423}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Network Equipment/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -850,16 +862,44 @@
             </View>
           </pnp:Views>
         </pnp:ListInstance>
+        <pnp:ListInstance Title="Network Library" Description="" DocumentTemplate="{site}/Network Library/Forms/template.dotx" TemplateType="101" Url="Network Library" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/Network Library/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/Network Library/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/Network Library/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{8477982D-FC5F-40E7-A499-8C7120AE85FD}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/Network Library/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="cb19284a-cde7-4570-a980-1dab8bd74470" Name="_ExtendedDescription" DisplayName="Description" />
+            <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
+            <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://canadaeast0.pushnp.svc.ms/notifications?token=cf2b98a8-39c2-48f5-a196-416c7ff7b12f" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
         <pnp:ListInstance Title="Networking" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Networking" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Networking/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Networking/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Networking/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
-          <pnp:PropertyBagEntries>
-            <pnp:PropertyBagEntry Key="wte_Source" Value="https://mybdodev.sharepoint.com/sites/Site1/Lists/Procedures/AllItems.aspx" Overwrite="false" />
-          </pnp:PropertyBagEntries>
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{53C71DBB-E1D9-41D3-BA8F-A456E736DB21}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Networking/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{D75B2153-9F35-4760-B60F-47874F4F5521}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Networking/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -867,7 +907,7 @@
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
-              <CustomFormatter><![CDATA[]]></CustomFormatter>
+              <CustomFormatter />
             </View>
           </pnp:Views>
           <pnp:Fields>
@@ -880,7 +920,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{487ECC80-A265-4A4F-A5C2-9A40B83E3705}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Procedures/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{7C0BF6DF-CCA3-4D29-A534-D447B2E6F2C6}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Procedures/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -903,7 +943,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C41180043153F945E98468297E67C3EEE43AB70" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{827B7A0C-8E88-454F-BF62-4C054D254851}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="By Author" Url="{site}/SitePages/Forms/ByAuthor.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+            <View Name="{9ADF472A-6D48-4B4D-BEA4-C9F8E52E88AC}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="By Author" Url="{site}/SitePages/Forms/ByAuthor.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
               <Query>
                 <GroupBy Collapse="FALSE">
                   <FieldRef Name="Author" />
@@ -922,7 +962,7 @@
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
             </View>
-            <View Name="{79D7FB3A-8672-4EC1-9F4C-26DDA984E399}" Type="HTML" DisplayName="All Pages" Url="{site}/SitePages/Forms/AllPages.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+            <View Name="{0FF345D1-0FA9-4C39-B27A-DD14F5A11B83}" Type="HTML" DisplayName="All Pages" Url="{site}/SitePages/Forms/AllPages.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="Modified" Ascending="FALSE" />
@@ -939,7 +979,7 @@
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
             </View>
-            <View Name="{092003EE-2E16-4CF8-B6F0-FE3BA587CEF7}" Type="HTML" DisplayName="By Editor" Url="{site}/SitePages/Forms/ByEditor.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+            <View Name="{61E08827-4BAD-4242-9C1A-6D2305FEC59A}" Type="HTML" DisplayName="By Editor" Url="{site}/SitePages/Forms/ByEditor.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
               <Query>
                 <GroupBy Collapse="FALSE">
                   <FieldRef Name="Editor" />
@@ -959,7 +999,7 @@
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
             </View>
-            <View Name="{E88904D7-8C64-4790-8D76-1FC23BD0D24F}" Type="HTML" DisplayName="Created By Me" Url="{site}/SitePages/Forms/CreatedByMe.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+            <View Name="{6923E0EE-CCB6-4553-B3AE-BC575AF99F83}" Type="HTML" DisplayName="Created By Me" Url="{site}/SitePages/Forms/CreatedByMe.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
               <Query>
                 <Where>
                   <Eq>
@@ -984,7 +1024,7 @@
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
             </View>
-            <View Name="{CD53B542-435F-400D-9DB0-173D3DCA6DE1}" Type="HTML" DisplayName="Recent Changes" Url="{site}/SitePages/Forms/RecentChanges.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+            <View Name="{BF948D50-4CDF-4E32-8C29-579088C357AC}" Type="HTML" DisplayName="Recent Changes" Url="{site}/SitePages/Forms/RecentChanges.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="Modified" Ascending="FALSE" />
@@ -1026,7 +1066,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{6B4A7F46-78DD-4ADE-BE06-E6879D662CEE}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/Style Library/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+            <View Name="{2085FAEE-9664-4158-B4C6-1A3D102D85AB}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/Style Library/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="FileLeafRef" />
@@ -1049,15 +1089,12 @@
           </pnp:FieldRefs>
         </pnp:ListInstance>
         <pnp:ListInstance Title="Systems" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Systems" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Systems/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Systems/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Systems/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
-          <pnp:PropertyBagEntries>
-            <pnp:PropertyBagEntry Key="wte_Source" Value="https://mybdodev.sharepoint.com/sites/Site1/Lists/Procedures/AllItems.aspx" Overwrite="false" />
-          </pnp:PropertyBagEntries>
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{6FCFBF0A-64F4-4765-A433-CE0B51F5C4D8}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Systems/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{447F7D2E-CEDE-4BB5-8491-F6A859868EAD}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Systems/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -1065,7 +1102,7 @@
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
-              <CustomFormatter><![CDATA[]]></CustomFormatter>
+              <CustomFormatter />
             </View>
           </pnp:Views>
           <pnp:Fields>
@@ -1081,7 +1118,7 @@
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{C150D1E2-4449-410A-A68D-7EA6EE78192F}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Systems Inventory/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{F26477E4-F021-4C07-9218-01F01363C6DC}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Systems Inventory/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query />
               <ViewFields>
                 <FieldRef Name="LinkTitle" />
@@ -1147,9 +1184,6 @@
           <pnp:Feature ID="547a2104-e8cb-4667-b64e-d47190d6b2c8" />
         </pnp:WebFeatures>
       </pnp:Features>
-      <pnp:Files>
-        <pnp:File Src="Shared Documents/Post office Portal-Enhancement Phase 5.pptx" Folder="Shared Documents" Overwrite="true" Level="Published" />
-      </pnp:Files>
       <pnp:ApplicationLifecycleManagement>
         <pnp:Apps>
           <pnp:App AppId="8f69b840-b143-402b-b0d2-4baa3c95fdbf" Action="Install" />
@@ -1157,29 +1191,29 @@
       </pnp:ApplicationLifecycleManagement>
       <pnp:ClientSidePages>
         <pnp:ClientSidePage PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Layout="Home" EnableComments="false" Title="Home" ThumbnailUrl="" PageName="Home.aspx">
-          <pnp:Header Type="Default" LayoutType="FullWidthImage" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
           <pnp:Sections>
             <pnp:Section Order="1" Type="TwoColumnRight">
               <pnp:Controls>
                 <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;f6fdf4f8-4a24-437b-a127-32e66a5dd9b4&quot;, &quot;instanceId&quot;: &quot;53f433fc-2550-4f8e-be1a-917b5f7e8fcb&quot;, &quot;title&quot;: &quot;Twitter&quot;, &quot;description&quot;: &quot;Twitter&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;displayAs&quot;:&quot;list&quot;,&quot;displayHeader&quot;:false,&quot;displayFooter&quot;:false,&quot;displayBorders&quot;:true,&quot;limit&quot;:&quot;2&quot;,&quot;term&quot;:&quot;@MSFT365Status&quot;,&quot;widthSlider&quot;:100,&quot;title&quot;:&quot;&quot;,&quot;displayLightTheme&quot;:true}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="f6fdf4f8-4a24-437b-a127-32e66a5dd9b4" Order="1" Column="1" />
-                <pnp:CanvasControl WebPartType="News" JsonControlData="{&quot;id&quot;: &quot;8c88f208-6c77-4bdb-86a0-0c47b4316588&quot;, &quot;instanceId&quot;: &quot;fc00618c-dbdd-4dc6-b297-e396b1ab5f32&quot;, &quot;title&quot;: &quot;News&quot;, &quot;description&quot;: &quot;News&quot;, &quot;dataVersion&quot;: &quot;1.12&quot;, &quot;properties&quot;: {&quot;carouselSettings&quot;:{&quot;autoplay&quot;:false,&quot;autoplaySpeed&quot;:5,&quot;dots&quot;:true,&quot;lazyLoad&quot;:true,&quot;metadata&quot;:true,&quot;swipe&quot;:true,&quot;useStockItems&quot;:false},&quot;showChrome&quot;:true,&quot;showNewsMetadata&quot;:{&quot;showSocialActions&quot;:false,&quot;showAuthor&quot;:true,&quot;showDate&quot;:true},&quot;layoutId&quot;:&quot;GridNews&quot;,&quot;filterKQLQuery&quot;:&quot;&quot;,&quot;carouselHeroWrapperComponentId&quot;:&quot;&quot;,&quot;prefetchCount&quot;:2,&quot;filters&quot;:[{&quot;filterType&quot;:1,&quot;value&quot;:&quot;&quot;,&quot;values&quot;:[]}],&quot;newsDataSourceProp&quot;:1,&quot;dataProviderId&quot;:&quot;news&quot;,&quot;newsSiteList&quot;:[],&quot;renderItemsSliderValue&quot;:2,&quot;layoutComponentId&quot;:&quot;&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;pinnedItems&quot;:[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],&quot;serializedFilterQuery&quot;:&quot;&lt;Where&gt;&lt;Eq&gt;&lt;FieldRef Name=\&quot;FSObjType\&quot; /&gt;&lt;Value Type=\&quot;Integer\&quot;&gt;0&lt;/Value&gt;&lt;/Eq&gt;&lt;/Where&gt;&quot;,&quot;propsLastEdited&quot;:&quot;2021-07-29T16:07:36.715Z&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Announcements &quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;{hosturl}{site}&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="8c88f208-6c77-4bdb-86a0-0c47b4316588" Order="1" Column="2" />
+                <pnp:CanvasControl WebPartType="News" JsonControlData="{&quot;id&quot;: &quot;8c88f208-6c77-4bdb-86a0-0c47b4316588&quot;, &quot;instanceId&quot;: &quot;fc00618c-dbdd-4dc6-b297-e396b1ab5f32&quot;, &quot;title&quot;: &quot;News&quot;, &quot;description&quot;: &quot;News&quot;, &quot;dataVersion&quot;: &quot;1.12&quot;, &quot;properties&quot;: {&quot;carouselSettings&quot;:{&quot;autoplay&quot;:false,&quot;autoplaySpeed&quot;:5,&quot;dots&quot;:true,&quot;lazyLoad&quot;:true,&quot;metadata&quot;:true,&quot;swipe&quot;:true,&quot;useStockItems&quot;:false},&quot;showChrome&quot;:true,&quot;showNewsMetadata&quot;:{&quot;showSocialActions&quot;:false,&quot;showAuthor&quot;:true,&quot;showDate&quot;:true},&quot;layoutId&quot;:&quot;GridNews&quot;,&quot;filterKQLQuery&quot;:&quot;&quot;,&quot;carouselHeroWrapperComponentId&quot;:&quot;&quot;,&quot;prefetchCount&quot;:2,&quot;filters&quot;:[{&quot;filterType&quot;:1,&quot;value&quot;:&quot;&quot;,&quot;values&quot;:[]}],&quot;newsDataSourceProp&quot;:1,&quot;dataProviderId&quot;:&quot;news&quot;,&quot;newsSiteList&quot;:[],&quot;renderItemsSliderValue&quot;:2,&quot;layoutComponentId&quot;:&quot;&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;pinnedItems&quot;:[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],&quot;serializedFilterQuery&quot;:&quot;&lt;Where&gt;&lt;Eq&gt;&lt;FieldRef Name=\&quot;FSObjType\&quot; /&gt;&lt;Value Type=\&quot;Integer\&quot;&gt;0&lt;/Value&gt;&lt;/Eq&gt;&lt;/Where&gt;&quot;,&quot;propsLastEdited&quot;:&quot;2021-07-29T16:07:36.715Z&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Announcements &quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;https://{fqdn}{site}&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="8c88f208-6c77-4bdb-86a0-0c47b4316588" Order="1" Column="2" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="2" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="DocumentEmbed" JsonControlData="{&quot;id&quot;: &quot;b7dd04e1-19ce-4b24-9132-b60a1c2b910d&quot;, &quot;instanceId&quot;: &quot;e238cc14-382e-4f49-8405-24f524e51c44&quot;, &quot;title&quot;: &quot;File viewer&quot;, &quot;description&quot;: &quot;Display a document or file on your page including Word, Excel, PowerPoint, PDF, 3D models, and more.&quot;, &quot;dataVersion&quot;: &quot;1.4&quot;, &quot;properties&quot;: {&quot;annotation&quot;:&quot;&quot;,&quot;authorName&quot;:&quot;Dimple Pille&quot;,&quot;chartitem&quot;:&quot;&quot;,&quot;endrange&quot;:&quot;&quot;,&quot;excelSettingsType&quot;:&quot;&quot;,&quot;file&quot;:&quot;{hosturl}{site}/Shared%20Documents/Post%20office%20Portal-Enhancement%20Phase%205.pptx&quot;,&quot;listId&quot;:&quot;{listid:Documents}&quot;,&quot;modifiedAt&quot;:&quot;2021-09-07T21:02:56Z&quot;,&quot;photoUrl&quot;:&quot;{hosturl}/_vti_bin/afdcache.ashx/_userprofile/userphoto.jpg?_oat_=1631082125_542475a8d0ab909944666bc5d4199e6467e67aea02e6e752732d73f6893233ea&amp;P1=1631052974&amp;P2=1844770583&amp;P3=1&amp;P4=1KvRB6RGS8dumIFjSgEdMmYiFZxhEZ1i5wNKY%2FqW%2FFr57qfaYpyIWr62GkzjPX7XsN3K4qLmDiA%2F6X0fm%2F%2FdL%2Bgs%2F9YL7WaVSPfEepDHKKxnez5xdEBHwe5MP6eMXyyHXzhjDTq%2FEABmIWGOaG0rPYPAcPy%2F8724budwHz%2F5gCumCXzv%2BY0Aje5wcQRTyM%2Bn9L4GHEGVgoJmPAgjrmHe7wdcXyWX%2BktmtkbKyFR8tn8%2BzlS0JkltESEVXLzK5YSNKZWG7fiTSf824Wy61M1SJr%2FWVQSQRLx2DbxuwMZdfeCmOMafLoCUFVZ%2Bke4w6FT%2BOWDz%2BX2V8f8KdliMbbDYxA%3D%3D&amp;size=S&amp;accountname=dpille%40mybdodev.onmicrosoft.com&quot;,&quot;rangeitem&quot;:&quot;&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;startPage&quot;:1,&quot;startrange&quot;:&quot;&quot;,&quot;tableitem&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;{fileuniqueid:Shared Documents/Post office Portal-Enhancement Phase 5.pptx}&quot;,&quot;wdallowinteractivity&quot;:true,&quot;wdhidegridlines&quot;:true,&quot;wdhideheaders&quot;:true,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;webAbsoluteUrl&quot;:&quot;{hosturl}{site}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Post office Portal-Enhancement Phase 5&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;serverRelativeUrl&quot;:&quot;{site}/Shared%20Documents/Post%20office%20Portal-Enhancement%20Phase%205.pptx&quot;,&quot;wopiurl&quot;:&quot;{site}/_layouts/15/Doc.aspx?sourcedoc=%7b{fileuniqueid:Shared Documents/Post office Portal-Enhancement Phase 5.pptx}%7d&amp;file=Post%20office%20Portal-Enhancement%20Phase%205.pptx&amp;action=embedview&amp;mobileredirect=true&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="b7dd04e1-19ce-4b24-9132-b60a1c2b910d" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;f826ad2a-1590-44b4-ade2-034cd0f43128&quot;, &quot;instanceId&quot;: &quot;8d3150ef-d1e1-4663-a96e-67a95cedc966&quot;, &quot;title&quot;: &quot;Custom File Viewer&quot;, &quot;description&quot;: &quot;FileViewer description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;FileViewer&quot;,&quot;selectedLibrary&quot;:&quot;Home Library&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="f826ad2a-1590-44b4-ade2-034cd0f43128" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="3" Type="OneColumn">
               <pnp:Controls>
                 <pnp:CanvasControl WebPartType="LinkPreview" JsonControlData="{&quot;id&quot;: &quot;6410b3b6-d440-4663-8744-378976dc041e&quot;, &quot;instanceId&quot;: &quot;a67b1d80-cfa4-4546-95c6-f61d541ad231&quot;, &quot;title&quot;: &quot;Link&quot;, &quot;description&quot;: &quot;Link&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;url&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;imageURL&quot;:&quot;&quot;,&quot;linkPreviewComponentMode&quot;:2,&quot;previewContent&quot;:{}}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="6410b3b6-d440-4663-8744-378976dc041e" Order="1" Column="1" />
-                <pnp:CanvasControl WebPartType="QuickLinks" JsonControlData="{&quot;id&quot;: &quot;c70391ea-0b10-4ee9-b2b4-006d3fcad0cd&quot;, &quot;instanceId&quot;: &quot;07b65260-5b44-44e0-b77f-82de790585cb&quot;, &quot;title&quot;: &quot;Quick links&quot;, &quot;description&quot;: &quot;Quick links&quot;, &quot;dataVersion&quot;: &quot;2.2&quot;, &quot;properties&quot;: {&quot;items&quot;:[{&quot;sourceItem&quot;:{&quot;itemType&quot;:2,&quot;fileExtension&quot;:&quot;&quot;,&quot;progId&quot;:&quot;&quot;},&quot;thumbnailType&quot;:3,&quot;id&quot;:2,&quot;altText&quot;:&quot;&quot;,&quot;rawPreviewImageMinCanvasWidth&quot;:32767},{&quot;sourceItem&quot;:{&quot;itemType&quot;:2,&quot;fileExtension&quot;:&quot;&quot;,&quot;progId&quot;:&quot;&quot;},&quot;thumbnailType&quot;:3,&quot;id&quot;:1,&quot;altText&quot;:&quot;&quot;,&quot;rawPreviewImageMinCanvasWidth&quot;:32767}],&quot;isMigrated&quot;:true,&quot;layoutId&quot;:&quot;List&quot;,&quot;shouldShowThumbnail&quot;:true,&quot;imageWidth&quot;:100,&quot;buttonLayoutOptions&quot;:{&quot;showDescription&quot;:false,&quot;buttonTreatment&quot;:2,&quot;iconPositionType&quot;:2,&quot;textAlignmentVertical&quot;:2,&quot;textAlignmentHorizontal&quot;:2,&quot;linesOfText&quot;:2},&quot;listLayoutOptions&quot;:{&quot;showDescription&quot;:true,&quot;showIcon&quot;:true},&quot;waffleLayoutOptions&quot;:{&quot;iconSize&quot;:1,&quot;onlyShowThumbnail&quot;:false},&quot;hideWebPartWhenEmpty&quot;:true,&quot;dataProviderId&quot;:&quot;QuickLinks&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Management Portals&quot;,&quot;items[0].description&quot;:&quot;Cloud IaaS Infra&quot;,&quot;items[1].description&quot;:&quot;Backend Admin for Back Office&quot;,&quot;items[0].title&quot;:&quot;Microsoft Azure&quot;,&quot;items[1].title&quot;:&quot;Office 365&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;{hosturl}{site}&quot;,&quot;items[0].sourceItem.url&quot;:&quot;https://portal.azure.com&quot;,&quot;items[1].sourceItem.url&quot;:&quot;https://portal.office.com&quot;},&quot;componentDependencies&quot;:{&quot;layoutComponentId&quot;:&quot;706e33c8-af37-4e7b-9d22-6e5694d92a6f&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="c70391ea-0b10-4ee9-b2b4-006d3fcad0cd" Order="2" Column="1" />
+                <pnp:CanvasControl WebPartType="QuickLinks" JsonControlData="{&quot;id&quot;: &quot;c70391ea-0b10-4ee9-b2b4-006d3fcad0cd&quot;, &quot;instanceId&quot;: &quot;07b65260-5b44-44e0-b77f-82de790585cb&quot;, &quot;title&quot;: &quot;Quick links&quot;, &quot;description&quot;: &quot;Quick links&quot;, &quot;dataVersion&quot;: &quot;2.2&quot;, &quot;properties&quot;: {&quot;items&quot;:[{&quot;sourceItem&quot;:{&quot;itemType&quot;:2,&quot;fileExtension&quot;:&quot;&quot;,&quot;progId&quot;:&quot;&quot;},&quot;thumbnailType&quot;:3,&quot;id&quot;:2,&quot;altText&quot;:&quot;&quot;,&quot;rawPreviewImageMinCanvasWidth&quot;:32767},{&quot;sourceItem&quot;:{&quot;itemType&quot;:2,&quot;fileExtension&quot;:&quot;&quot;,&quot;progId&quot;:&quot;&quot;},&quot;thumbnailType&quot;:3,&quot;id&quot;:1,&quot;altText&quot;:&quot;&quot;,&quot;rawPreviewImageMinCanvasWidth&quot;:32767}],&quot;isMigrated&quot;:true,&quot;layoutId&quot;:&quot;List&quot;,&quot;shouldShowThumbnail&quot;:true,&quot;imageWidth&quot;:100,&quot;buttonLayoutOptions&quot;:{&quot;showDescription&quot;:false,&quot;buttonTreatment&quot;:2,&quot;iconPositionType&quot;:2,&quot;textAlignmentVertical&quot;:2,&quot;textAlignmentHorizontal&quot;:2,&quot;linesOfText&quot;:2},&quot;listLayoutOptions&quot;:{&quot;showDescription&quot;:true,&quot;showIcon&quot;:true},&quot;waffleLayoutOptions&quot;:{&quot;iconSize&quot;:1,&quot;onlyShowThumbnail&quot;:false},&quot;hideWebPartWhenEmpty&quot;:true,&quot;dataProviderId&quot;:&quot;QuickLinks&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Management Portals&quot;,&quot;items[0].description&quot;:&quot;Cloud IaaS Infra&quot;,&quot;items[1].description&quot;:&quot;Backend Admin for Back Office&quot;,&quot;items[0].title&quot;:&quot;Microsoft Azure&quot;,&quot;items[1].title&quot;:&quot;Office 365&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;https://{fqdn}{site}&quot;,&quot;items[0].sourceItem.url&quot;:&quot;https://portal.azure.com&quot;,&quot;items[1].sourceItem.url&quot;:&quot;https://portal.office.com&quot;},&quot;componentDependencies&quot;:{&quot;layoutComponentId&quot;:&quot;706e33c8-af37-4e7b-9d22-6e5694d92a6f&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="c70391ea-0b10-4ee9-b2b4-006d3fcad0cd" Order="2" Column="1" />
                 <pnp:CanvasControl WebPartType="People" JsonControlData="{&quot;id&quot;: &quot;7f718435-ee4d-431c-bdbf-9c4ff326f46e&quot;, &quot;instanceId&quot;: &quot;e836e621-8512-4b7b-a94d-353be4dedf0d&quot;, &quot;title&quot;: &quot;People&quot;, &quot;description&quot;: &quot;People&quot;, &quot;dataVersion&quot;: &quot;1.3&quot;, &quot;properties&quot;: {&quot;layout&quot;:2,&quot;persons&quot;:[{&quot;id&quot;:&quot;i:0#.f|membership|d.dimitrov_mcintoshperry.com#ext#@ic360solutions.onmicrosoft.com&quot;,&quot;role&quot;:&quot;&quot;,&quot;firstName&quot;:&quot;&quot;,&quot;lastName&quot;:&quot;&quot;,&quot;upn&quot;:&quot;&quot;,&quot;phone&quot;:&quot;&quot;,&quot;sip&quot;:&quot;&quot;,&quot;department&quot;:&quot;&quot;},{&quot;id&quot;:&quot;l.sachsalber@mcintoshperry.com&quot;,&quot;role&quot;:&quot;&quot;,&quot;department&quot;:&quot;&quot;},{&quot;id&quot;:&quot;i:0#.f|membership|acrain@ic360.ca&quot;,&quot;role&quot;:&quot;Managing Director, Senior Technical Architect&quot;,&quot;firstName&quot;:&quot;&quot;,&quot;lastName&quot;:&quot;&quot;,&quot;upn&quot;:&quot;&quot;,&quot;phone&quot;:&quot;&quot;,&quot;sip&quot;:&quot;&quot;,&quot;department&quot;:&quot;&quot;}]}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Key Contacts&quot;,&quot;persons[0].name&quot;:&quot;Dimitre Dimitrov&quot;,&quot;persons[1].name&quot;:&quot;Lisa Sachsalber&quot;,&quot;persons[2].name&quot;:&quot;Adam Crain&quot;,&quot;persons[0].email&quot;:&quot;d.dimitrov@mcintoshperry.com&quot;,&quot;persons[1].email&quot;:&quot;l.sachsalber@mcintoshperry.com&quot;,&quot;persons[2].email&quot;:&quot;acrain@ic360.ca&quot;,&quot;persons[0].description&quot;:&quot;Primary Business Contact&quot;,&quot;persons[1].description&quot;:&quot;Secondary Site Contact\nSharePoint Contact&quot;,&quot;persons[2].description&quot;:&quot;Client Business &amp; Technical Lead&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="7f718435-ee4d-431c-bdbf-9c4ff326f46e" Order="3" Column="1" />
-                <pnp:CanvasControl WebPartType="Events" JsonControlData="{&quot;id&quot;: &quot;20745d7d-8581-4a6c-bf26-68279bc123fc&quot;, &quot;instanceId&quot;: &quot;25c26266-dac3-4346-97fb-4e581546fd58&quot;, &quot;title&quot;: &quot;Events&quot;, &quot;description&quot;: &quot;Events&quot;, &quot;dataVersion&quot;: &quot;1.4&quot;, &quot;properties&quot;: {&quot;selectedListId&quot;:&quot;{listid:Events}&quot;,&quot;selectedCategory&quot;:&quot;&quot;,&quot;dateRangeOption&quot;:0,&quot;layoutId&quot;:&quot;Flex&quot;,&quot;dataProviderId&quot;:&quot;Search&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;layout&quot;:&quot;Compact&quot;,&quot;dataSource&quot;:3,&quot;sites&quot;:[],&quot;maxItemsPerPage&quot;:20,&quot;audienceTarget&quot;:false,&quot;showImage&quot;:true}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Renewals &amp; Critical Dates&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;{hosturl}{site}&quot;},&quot;componentDependencies&quot;:{&quot;layoutComponentId&quot;:&quot;0447e11d-bed9-4898-b600-8dbcd95e9cc2&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="20745d7d-8581-4a6c-bf26-68279bc123fc" Order="4" Column="1" />
+                <pnp:CanvasControl WebPartType="Events" JsonControlData="{&quot;id&quot;: &quot;20745d7d-8581-4a6c-bf26-68279bc123fc&quot;, &quot;instanceId&quot;: &quot;25c26266-dac3-4346-97fb-4e581546fd58&quot;, &quot;title&quot;: &quot;Events&quot;, &quot;description&quot;: &quot;Events&quot;, &quot;dataVersion&quot;: &quot;1.4&quot;, &quot;properties&quot;: {&quot;selectedListId&quot;:&quot;{listid:Events}&quot;,&quot;selectedCategory&quot;:&quot;&quot;,&quot;dateRangeOption&quot;:0,&quot;layoutId&quot;:&quot;Flex&quot;,&quot;dataProviderId&quot;:&quot;Search&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;layout&quot;:&quot;Compact&quot;,&quot;dataSource&quot;:3,&quot;sites&quot;:[],&quot;maxItemsPerPage&quot;:20,&quot;audienceTarget&quot;:false,&quot;showImage&quot;:true}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Renewals &amp; Critical Dates&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;https://{fqdn}{site}&quot;},&quot;componentDependencies&quot;:{&quot;layoutComponentId&quot;:&quot;0447e11d-bed9-4898-b600-8dbcd95e9cc2&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="20745d7d-8581-4a6c-bf26-68279bc123fc" Order="4" Column="1" />
                 <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;bcea38c1-2a03-4fc2-b4a5-ec9a1dabc5ac&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;List&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:IT Service Catalogue}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/MP  IT Service Catalogue&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/MP  IT Service Catalogue&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;MP - IT Service Catalogue&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="5" Column="1" />
                 <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;7f653dcb-a971-4934-b3aa-5d0fb92356b4&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;List&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:IT Workplan}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/IT Workplan&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/IT Workplan&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;IT Workplan&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="6" Column="1" />
-                <pnp:CanvasControl WebPartType="ContentRollup" JsonControlData="{&quot;id&quot;: &quot;daf0b71c-6de8-4ef7-b511-faae7c388708&quot;, &quot;instanceId&quot;: &quot;f078392e-7eed-43fc-93b2-92dda89bac3c&quot;, &quot;title&quot;: &quot;Highlighted content&quot;, &quot;description&quot;: &quot;Highlighted content&quot;, &quot;dataVersion&quot;: &quot;2.5&quot;, &quot;properties&quot;: {&quot;query&quot;:{&quot;contentLocation&quot;:4,&quot;contentTypes&quot;:[1],&quot;sortType&quot;:1,&quot;filters&quot;:[{&quot;filterType&quot;:1,&quot;value&quot;:&quot;&quot;}],&quot;documentTypes&quot;:[99]},&quot;templateId&quot;:4,&quot;maxItemsPerPage&quot;:10,&quot;hideWebPartWhenEmpty&quot;:false,&quot;layoutId&quot;:&quot;FilmStrip&quot;,&quot;dataProviderId&quot;:&quot;List&quot;,&quot;isDefaultDocumentLibrary&quot;:true,&quot;displayMaps&quot;:{&quot;1&quot;:{&quot;headingText&quot;:{&quot;sources&quot;:[&quot;SiteTitle&quot;]},&quot;headingUrl&quot;:{&quot;sources&quot;:[&quot;SPWebUrl&quot;]},&quot;title&quot;:{&quot;sources&quot;:[&quot;UserName&quot;,&quot;Title&quot;]},&quot;personImageUrl&quot;:{&quot;sources&quot;:[&quot;ProfileImageSrc&quot;]},&quot;name&quot;:{&quot;sources&quot;:[&quot;Name&quot;]},&quot;initials&quot;:{&quot;sources&quot;:[&quot;Initials&quot;]},&quot;itemUrl&quot;:{&quot;sources&quot;:[&quot;WebPath&quot;]},&quot;activity&quot;:{&quot;sources&quot;:[&quot;ModifiedDate&quot;]},&quot;previewUrl&quot;:{&quot;sources&quot;:[&quot;PreviewUrl&quot;,&quot;PictureThumbnailURL&quot;]},&quot;iconUrl&quot;:{&quot;sources&quot;:[&quot;IconUrl&quot;]},&quot;accentColor&quot;:{&quot;sources&quot;:[&quot;AccentColor&quot;]},&quot;cardType&quot;:{&quot;sources&quot;:[&quot;CardType&quot;]},&quot;tipActionLabel&quot;:{&quot;sources&quot;:[&quot;TipActionLabel&quot;]},&quot;tipActionButtonIcon&quot;:{&quot;sources&quot;:[&quot;TipActionButtonIcon&quot;]},&quot;className&quot;:{&quot;sources&quot;:[&quot;ClassName&quot;]},&quot;telemetryProperties&quot;:{&quot;sources&quot;:[&quot;TelemetryProperties&quot;]},&quot;imageOverlapText&quot;:{&quot;sources&quot;:[&quot;ImageOverlapText&quot;]},&quot;imageOverlapTextAriaLabel&quot;:{&quot;sources&quot;:[&quot;ImageOverlapTextAriaLabel&quot;]}},&quot;2&quot;:{&quot;column1&quot;:{&quot;heading&quot;:&quot;&quot;,&quot;sources&quot;:[&quot;FileType&quot;],&quot;width&quot;:34},&quot;column2&quot;:{&quot;heading&quot;:&quot;Title&quot;,&quot;sources&quot;:[&quot;Title&quot;],&quot;linkUrls&quot;:[&quot;WebPath&quot;],&quot;width&quot;:250},&quot;column3&quot;:{&quot;heading&quot;:&quot;Modified&quot;,&quot;sources&quot;:[&quot;ModifiedDate&quot;],&quot;width&quot;:100},&quot;column4&quot;:{&quot;heading&quot;:&quot;Modified By&quot;,&quot;sources&quot;:[&quot;Name&quot;],&quot;width&quot;:150}},&quot;3&quot;:{&quot;id&quot;:{&quot;sources&quot;:[&quot;UniqueID&quot;]},&quot;edit&quot;:{&quot;sources&quot;:[&quot;edit&quot;]},&quot;DefaultEncodingURL&quot;:{&quot;sources&quot;:[&quot;DefaultEncodingURL&quot;]},&quot;FileExtension&quot;:{&quot;sources&quot;:[&quot;FileExtension&quot;]},&quot;FileType&quot;:{&quot;sources&quot;:[&quot;FileType&quot;]},&quot;Path&quot;:{&quot;sources&quot;:[&quot;Path&quot;]},&quot;PictureThumbnailURL&quot;:{&quot;sources&quot;:[&quot;PictureThumbnailURL&quot;]},&quot;PreviewUrl&quot;:{&quot;sources&quot;:[&quot;PreviewUrl&quot;]},&quot;SiteID&quot;:{&quot;sources&quot;:[&quot;SiteID&quot;]},&quot;SiteTitle&quot;:{&quot;sources&quot;:[&quot;SiteTitle&quot;]},&quot;Title&quot;:{&quot;sources&quot;:[&quot;Title&quot;]},&quot;UniqueID&quot;:{&quot;sources&quot;:[&quot;UniqueID&quot;]},&quot;WebId&quot;:{&quot;sources&quot;:[&quot;WebId&quot;]},&quot;WebPath&quot;:{&quot;sources&quot;:[&quot;WebPath&quot;]}},&quot;4&quot;:{&quot;headingText&quot;:{&quot;sources&quot;:[&quot;SiteTitle&quot;]},&quot;headingUrl&quot;:{&quot;sources&quot;:[&quot;SPWebUrl&quot;]},&quot;title&quot;:{&quot;sources&quot;:[&quot;UserName&quot;,&quot;Title&quot;]},&quot;personImageUrl&quot;:{&quot;sources&quot;:[&quot;ProfileImageSrc&quot;]},&quot;name&quot;:{&quot;sources&quot;:[&quot;Name&quot;]},&quot;initials&quot;:{&quot;sources&quot;:[&quot;Initials&quot;]},&quot;itemUrl&quot;:{&quot;sources&quot;:[&quot;WebPath&quot;]},&quot;activity&quot;:{&quot;sources&quot;:[&quot;ModifiedDate&quot;]},&quot;previewUrl&quot;:{&quot;sources&quot;:[&quot;PreviewUrl&quot;,&quot;PictureThumbnailURL&quot;]},&quot;iconUrl&quot;:{&quot;sources&quot;:[&quot;IconUrl&quot;]},&quot;accentColor&quot;:{&quot;sources&quot;:[&quot;AccentColor&quot;]},&quot;cardType&quot;:{&quot;sources&quot;:[&quot;CardType&quot;]},&quot;tipActionLabel&quot;:{&quot;sources&quot;:[&quot;TipActionLabel&quot;]},&quot;tipActionButtonIcon&quot;:{&quot;sources&quot;:[&quot;TipActionButtonIcon&quot;]},&quot;className&quot;:{&quot;sources&quot;:[&quot;ClassName&quot;]},&quot;telemetryProperties&quot;:{&quot;sources&quot;:[&quot;TelemetryProperties&quot;]},&quot;imageOverlapText&quot;:{&quot;sources&quot;:[&quot;ImageOverlapText&quot;]},&quot;imageOverlapTextAriaLabel&quot;:{&quot;sources&quot;:[&quot;ImageOverlapTextAriaLabel&quot;]}}},&quot;isTitleEnabled&quot;:true,&quot;sites&quot;:[],&quot;queryMode&quot;:&quot;Basic&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;caml&quot;:&quot;&lt;View Scope=\&quot;RecursiveAll\&quot;&gt;&lt;Query&gt;&lt;Where&gt;&lt;And&gt;&lt;And&gt;&lt;Eq&gt;&lt;FieldRef Name=\&quot;FSObjType\&quot; /&gt;&lt;Value Type=\&quot;Integer\&quot;&gt;0&lt;/Value&gt;&lt;/Eq&gt;&lt;And&gt;&lt;Neq&gt;&lt;FieldRef Name=\&quot;File_x0020_Type\&quot; /&gt;&lt;Value Type=\&quot;Text\&quot;&gt;onetoc&lt;/Value&gt;&lt;/Neq&gt;&lt;Neq&gt;&lt;FieldRef Name=\&quot;File_x0020_Type\&quot; /&gt;&lt;Value Type=\&quot;Text\&quot;&gt;onetoc2&lt;/Value&gt;&lt;/Neq&gt;&lt;/And&gt;&lt;/And&gt;&lt;Eq&gt;&lt;FieldRef Name=\&quot;FSObjType\&quot; /&gt;&lt;Value Type=\&quot;Integer\&quot;&gt;0&lt;/Value&gt;&lt;/Eq&gt;&lt;/And&gt;&lt;/Where&gt;&lt;OrderBy&gt;&lt;FieldRef Name=\&quot;Modified\&quot; Ascending=\&quot;false\&quot; /&gt;&lt;/OrderBy&gt;&lt;/Query&gt;&lt;ViewFields&gt;&lt;FieldRef Name=\&quot;Editor\&quot; /&gt;&lt;FieldRef Name=\&quot;FileLeafRef\&quot; /&gt;&lt;FieldRef Name=\&quot;File_x0020_Type\&quot; /&gt;&lt;FieldRef Name=\&quot;ID\&quot; /&gt;&lt;FieldRef Name=\&quot;Modified\&quot; /&gt;&lt;FieldRef Name=\&quot;Title\&quot; /&gt;&lt;FieldRef Name=\&quot;UniqueID\&quot; /&gt;&lt;FieldRef Name=\&quot;_ShortcutUrl\&quot; /&gt;&lt;FieldRef Name=\&quot;MediaServiceFastMetadata\&quot; /&gt;&lt;/ViewFields&gt;&lt;RowLimit Paged=\&quot;false\&quot;&gt;10&lt;/RowLimit&gt;&lt;/View&gt;&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Documents&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;{hosturl}{site}&quot;},&quot;componentDependencies&quot;:{&quot;layoutComponentId&quot;:&quot;8ac0c53c-e8d0-4e3e-87d0-7449eb0d4027&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="daf0b71c-6de8-4ef7-b511-faae7c388708" Order="7" Column="1" />
-                <pnp:CanvasControl WebPartType="QuickLinks" JsonControlData="{&quot;id&quot;: &quot;c70391ea-0b10-4ee9-b2b4-006d3fcad0cd&quot;, &quot;instanceId&quot;: &quot;827b43f0-884e-4e84-a25a-a27032357605&quot;, &quot;title&quot;: &quot;Quick links&quot;, &quot;description&quot;: &quot;Quick links&quot;, &quot;dataVersion&quot;: &quot;2.2&quot;, &quot;properties&quot;: {&quot;items&quot;:[],&quot;isMigrated&quot;:true,&quot;hideWebPartWhenEmpty&quot;:true,&quot;shouldShowThumbnail&quot;:true,&quot;layoutId&quot;:&quot;CompactCard&quot;,&quot;dataProviderId&quot;:&quot;QuickLinks&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;title&quot;:&quot;&quot;,&quot;imageWidth&quot;:100,&quot;buttonLayoutOptions&quot;:{&quot;showDescription&quot;:false,&quot;buttonTreatment&quot;:2,&quot;iconPositionType&quot;:2,&quot;textAlignmentVertical&quot;:2,&quot;textAlignmentHorizontal&quot;:2,&quot;linesOfText&quot;:2},&quot;listLayoutOptions&quot;:{&quot;showDescription&quot;:false,&quot;showIcon&quot;:true},&quot;waffleLayoutOptions&quot;:{&quot;iconSize&quot;:1,&quot;onlyShowThumbnail&quot;:false}}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;{hosturl}{site}&quot;},&quot;componentDependencies&quot;:{&quot;layoutComponentId&quot;:&quot;706e33c8-af37-4e7b-9d22-6e5694d92a6f&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="c70391ea-0b10-4ee9-b2b4-006d3fcad0cd" Order="8" Column="1" />
+                <pnp:CanvasControl WebPartType="ContentRollup" JsonControlData="{&quot;id&quot;: &quot;daf0b71c-6de8-4ef7-b511-faae7c388708&quot;, &quot;instanceId&quot;: &quot;f078392e-7eed-43fc-93b2-92dda89bac3c&quot;, &quot;title&quot;: &quot;Highlighted content&quot;, &quot;description&quot;: &quot;Highlighted content&quot;, &quot;dataVersion&quot;: &quot;2.5&quot;, &quot;properties&quot;: {&quot;query&quot;:{&quot;contentLocation&quot;:4,&quot;contentTypes&quot;:[1],&quot;sortType&quot;:1,&quot;filters&quot;:[{&quot;filterType&quot;:1,&quot;value&quot;:&quot;&quot;}],&quot;documentTypes&quot;:[99]},&quot;templateId&quot;:4,&quot;maxItemsPerPage&quot;:10,&quot;hideWebPartWhenEmpty&quot;:false,&quot;layoutId&quot;:&quot;FilmStrip&quot;,&quot;dataProviderId&quot;:&quot;List&quot;,&quot;isDefaultDocumentLibrary&quot;:true,&quot;displayMaps&quot;:{&quot;1&quot;:{&quot;headingText&quot;:{&quot;sources&quot;:[&quot;SiteTitle&quot;]},&quot;headingUrl&quot;:{&quot;sources&quot;:[&quot;SPWebUrl&quot;]},&quot;title&quot;:{&quot;sources&quot;:[&quot;UserName&quot;,&quot;Title&quot;]},&quot;personImageUrl&quot;:{&quot;sources&quot;:[&quot;ProfileImageSrc&quot;]},&quot;name&quot;:{&quot;sources&quot;:[&quot;Name&quot;]},&quot;initials&quot;:{&quot;sources&quot;:[&quot;Initials&quot;]},&quot;itemUrl&quot;:{&quot;sources&quot;:[&quot;WebPath&quot;]},&quot;activity&quot;:{&quot;sources&quot;:[&quot;ModifiedDate&quot;]},&quot;previewUrl&quot;:{&quot;sources&quot;:[&quot;PreviewUrl&quot;,&quot;PictureThumbnailURL&quot;]},&quot;iconUrl&quot;:{&quot;sources&quot;:[&quot;IconUrl&quot;]},&quot;accentColor&quot;:{&quot;sources&quot;:[&quot;AccentColor&quot;]},&quot;cardType&quot;:{&quot;sources&quot;:[&quot;CardType&quot;]},&quot;tipActionLabel&quot;:{&quot;sources&quot;:[&quot;TipActionLabel&quot;]},&quot;tipActionButtonIcon&quot;:{&quot;sources&quot;:[&quot;TipActionButtonIcon&quot;]},&quot;className&quot;:{&quot;sources&quot;:[&quot;ClassName&quot;]},&quot;telemetryProperties&quot;:{&quot;sources&quot;:[&quot;TelemetryProperties&quot;]},&quot;imageOverlapText&quot;:{&quot;sources&quot;:[&quot;ImageOverlapText&quot;]},&quot;imageOverlapTextAriaLabel&quot;:{&quot;sources&quot;:[&quot;ImageOverlapTextAriaLabel&quot;]}},&quot;2&quot;:{&quot;column1&quot;:{&quot;heading&quot;:&quot;&quot;,&quot;sources&quot;:[&quot;FileType&quot;],&quot;width&quot;:34},&quot;column2&quot;:{&quot;heading&quot;:&quot;Title&quot;,&quot;sources&quot;:[&quot;Title&quot;],&quot;linkUrls&quot;:[&quot;WebPath&quot;],&quot;width&quot;:250},&quot;column3&quot;:{&quot;heading&quot;:&quot;Modified&quot;,&quot;sources&quot;:[&quot;ModifiedDate&quot;],&quot;width&quot;:100},&quot;column4&quot;:{&quot;heading&quot;:&quot;Modified By&quot;,&quot;sources&quot;:[&quot;Name&quot;],&quot;width&quot;:150}},&quot;3&quot;:{&quot;id&quot;:{&quot;sources&quot;:[&quot;UniqueID&quot;]},&quot;edit&quot;:{&quot;sources&quot;:[&quot;edit&quot;]},&quot;DefaultEncodingURL&quot;:{&quot;sources&quot;:[&quot;DefaultEncodingURL&quot;]},&quot;FileExtension&quot;:{&quot;sources&quot;:[&quot;FileExtension&quot;]},&quot;FileType&quot;:{&quot;sources&quot;:[&quot;FileType&quot;]},&quot;Path&quot;:{&quot;sources&quot;:[&quot;Path&quot;]},&quot;PictureThumbnailURL&quot;:{&quot;sources&quot;:[&quot;PictureThumbnailURL&quot;]},&quot;PreviewUrl&quot;:{&quot;sources&quot;:[&quot;PreviewUrl&quot;]},&quot;SiteID&quot;:{&quot;sources&quot;:[&quot;SiteID&quot;]},&quot;SiteTitle&quot;:{&quot;sources&quot;:[&quot;SiteTitle&quot;]},&quot;Title&quot;:{&quot;sources&quot;:[&quot;Title&quot;]},&quot;UniqueID&quot;:{&quot;sources&quot;:[&quot;UniqueID&quot;]},&quot;WebId&quot;:{&quot;sources&quot;:[&quot;WebId&quot;]},&quot;WebPath&quot;:{&quot;sources&quot;:[&quot;WebPath&quot;]}},&quot;4&quot;:{&quot;headingText&quot;:{&quot;sources&quot;:[&quot;SiteTitle&quot;]},&quot;headingUrl&quot;:{&quot;sources&quot;:[&quot;SPWebUrl&quot;]},&quot;title&quot;:{&quot;sources&quot;:[&quot;UserName&quot;,&quot;Title&quot;]},&quot;personImageUrl&quot;:{&quot;sources&quot;:[&quot;ProfileImageSrc&quot;]},&quot;name&quot;:{&quot;sources&quot;:[&quot;Name&quot;]},&quot;initials&quot;:{&quot;sources&quot;:[&quot;Initials&quot;]},&quot;itemUrl&quot;:{&quot;sources&quot;:[&quot;WebPath&quot;]},&quot;activity&quot;:{&quot;sources&quot;:[&quot;ModifiedDate&quot;]},&quot;previewUrl&quot;:{&quot;sources&quot;:[&quot;PreviewUrl&quot;,&quot;PictureThumbnailURL&quot;]},&quot;iconUrl&quot;:{&quot;sources&quot;:[&quot;IconUrl&quot;]},&quot;accentColor&quot;:{&quot;sources&quot;:[&quot;AccentColor&quot;]},&quot;cardType&quot;:{&quot;sources&quot;:[&quot;CardType&quot;]},&quot;tipActionLabel&quot;:{&quot;sources&quot;:[&quot;TipActionLabel&quot;]},&quot;tipActionButtonIcon&quot;:{&quot;sources&quot;:[&quot;TipActionButtonIcon&quot;]},&quot;className&quot;:{&quot;sources&quot;:[&quot;ClassName&quot;]},&quot;telemetryProperties&quot;:{&quot;sources&quot;:[&quot;TelemetryProperties&quot;]},&quot;imageOverlapText&quot;:{&quot;sources&quot;:[&quot;ImageOverlapText&quot;]},&quot;imageOverlapTextAriaLabel&quot;:{&quot;sources&quot;:[&quot;ImageOverlapTextAriaLabel&quot;]}}},&quot;isTitleEnabled&quot;:true,&quot;sites&quot;:[],&quot;queryMode&quot;:&quot;Basic&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;caml&quot;:&quot;&lt;View Scope=\&quot;RecursiveAll\&quot;&gt;&lt;Query&gt;&lt;Where&gt;&lt;And&gt;&lt;And&gt;&lt;Eq&gt;&lt;FieldRef Name=\&quot;FSObjType\&quot; /&gt;&lt;Value Type=\&quot;Integer\&quot;&gt;0&lt;/Value&gt;&lt;/Eq&gt;&lt;And&gt;&lt;Neq&gt;&lt;FieldRef Name=\&quot;File_x0020_Type\&quot; /&gt;&lt;Value Type=\&quot;Text\&quot;&gt;onetoc&lt;/Value&gt;&lt;/Neq&gt;&lt;Neq&gt;&lt;FieldRef Name=\&quot;File_x0020_Type\&quot; /&gt;&lt;Value Type=\&quot;Text\&quot;&gt;onetoc2&lt;/Value&gt;&lt;/Neq&gt;&lt;/And&gt;&lt;/And&gt;&lt;Eq&gt;&lt;FieldRef Name=\&quot;FSObjType\&quot; /&gt;&lt;Value Type=\&quot;Integer\&quot;&gt;0&lt;/Value&gt;&lt;/Eq&gt;&lt;/And&gt;&lt;/Where&gt;&lt;OrderBy&gt;&lt;FieldRef Name=\&quot;Modified\&quot; Ascending=\&quot;false\&quot; /&gt;&lt;/OrderBy&gt;&lt;/Query&gt;&lt;ViewFields&gt;&lt;FieldRef Name=\&quot;Editor\&quot; /&gt;&lt;FieldRef Name=\&quot;FileLeafRef\&quot; /&gt;&lt;FieldRef Name=\&quot;File_x0020_Type\&quot; /&gt;&lt;FieldRef Name=\&quot;ID\&quot; /&gt;&lt;FieldRef Name=\&quot;Modified\&quot; /&gt;&lt;FieldRef Name=\&quot;Title\&quot; /&gt;&lt;FieldRef Name=\&quot;UniqueID\&quot; /&gt;&lt;FieldRef Name=\&quot;_ShortcutUrl\&quot; /&gt;&lt;FieldRef Name=\&quot;MediaServiceFastMetadata\&quot; /&gt;&lt;/ViewFields&gt;&lt;RowLimit Paged=\&quot;false\&quot;&gt;10&lt;/RowLimit&gt;&lt;/View&gt;&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Documents&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;https://{fqdn}{site}&quot;},&quot;componentDependencies&quot;:{&quot;layoutComponentId&quot;:&quot;8ac0c53c-e8d0-4e3e-87d0-7449eb0d4027&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="daf0b71c-6de8-4ef7-b511-faae7c388708" Order="7" Column="1" />
+                <pnp:CanvasControl WebPartType="QuickLinks" JsonControlData="{&quot;id&quot;: &quot;c70391ea-0b10-4ee9-b2b4-006d3fcad0cd&quot;, &quot;instanceId&quot;: &quot;827b43f0-884e-4e84-a25a-a27032357605&quot;, &quot;title&quot;: &quot;Quick links&quot;, &quot;description&quot;: &quot;Quick links&quot;, &quot;dataVersion&quot;: &quot;2.2&quot;, &quot;properties&quot;: {&quot;items&quot;:[],&quot;isMigrated&quot;:true,&quot;hideWebPartWhenEmpty&quot;:true,&quot;shouldShowThumbnail&quot;:true,&quot;layoutId&quot;:&quot;CompactCard&quot;,&quot;dataProviderId&quot;:&quot;QuickLinks&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;,&quot;title&quot;:&quot;&quot;,&quot;imageWidth&quot;:100,&quot;buttonLayoutOptions&quot;:{&quot;showDescription&quot;:false,&quot;buttonTreatment&quot;:2,&quot;iconPositionType&quot;:2,&quot;textAlignmentVertical&quot;:2,&quot;textAlignmentHorizontal&quot;:2,&quot;linesOfText&quot;:2},&quot;listLayoutOptions&quot;:{&quot;showDescription&quot;:false,&quot;showIcon&quot;:true},&quot;waffleLayoutOptions&quot;:{&quot;iconSize&quot;:1,&quot;onlyShowThumbnail&quot;:false}}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;https://{fqdn}{site}&quot;},&quot;componentDependencies&quot;:{&quot;layoutComponentId&quot;:&quot;706e33c8-af37-4e7b-9d22-6e5694d92a6f&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="c70391ea-0b10-4ee9-b2b4-006d3fcad0cd" Order="8" Column="1" />
               </pnp:Controls>
             </pnp:Section>
           </pnp:Sections>
@@ -1189,99 +1223,99 @@
           <pnp:Sections>
             <pnp:Section Order="1" Type="TwoColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;b3d2f138-7afb-498d-b3c2-2e67bb839e22&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;IT Operations&quot;,&quot;selectedZone&quot;:&quot;PC Summary&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;947380fb-7a4e-47fd-a8e3-aa0302d0045d&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;IT Operations&quot;,&quot;selectedZone&quot;:&quot;IT Operating Systems&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="2" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;b3d2f138-7afb-498d-b3c2-2e67bb839e22&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;IT Operations&quot;,&quot;selectedZone&quot;:&quot;PC Summary&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;947380fb-7a4e-47fd-a8e3-aa0302d0045d&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;IT Operations&quot;,&quot;selectedZone&quot;:&quot;IT Operating Systems&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="2" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="2" Type="TwoColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;c878f213-9d87-4593-a34a-8b6aa9089160&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;IT Operations&quot;,&quot;selectedZone&quot;:&quot;Mobile Devices&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;a1e985da-63d6-4171-8f93-cb4b6b2b8551&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;IT Operations&quot;,&quot;selectedZone&quot;:&quot;Printers&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="2" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;c878f213-9d87-4593-a34a-8b6aa9089160&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;IT Operations&quot;,&quot;selectedZone&quot;:&quot;Mobile Devices&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;a1e985da-63d6-4171-8f93-cb4b6b2b8551&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;IT Operations&quot;,&quot;selectedZone&quot;:&quot;Printers&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="2" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="3" Type="TwoColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;0a8e9e43-41a4-4eb8-98dd-3dc46439fb08&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;IT Operations&quot;,&quot;selectedZone&quot;:&quot;Network&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;0a8e9e43-41a4-4eb8-98dd-3dc46439fb08&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;IT Operations&quot;,&quot;selectedZone&quot;:&quot;Network&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="4" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;9bf234c5-0d1d-4464-b667-b2990e2bd9fd&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;Display a list from this site.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:IT Ops Systems}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/IT Ops Systems&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/IT Ops Systems&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;IT Ops Systems&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;9bf234c5-0d1d-4464-b667-b2990e2bd9fd&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;List&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:IT Ops Systems}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/IT Ops Systems&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/IT Ops Systems&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;IT Ops Systems&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="5" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;5ad57aa6-6ba3-4c93-9010-9cdd7b3d0d4b&quot;, &quot;title&quot;: &quot;Document library&quot;, &quot;description&quot;: &quot;Show a document library from this site.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:true,&quot;selectedListId&quot;:&quot;{listid:IT Operations Gallery}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/IT Operations Gallery&quot;,&quot;webRelativeListUrl&quot;:&quot;/IT Operations Gallery&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;IT Operations Gallery&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;5ad57aa6-6ba3-4c93-9010-9cdd7b3d0d4b&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;List&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:true,&quot;selectedListId&quot;:&quot;{listid:IT Operations Gallery}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/IT Operations Gallery&quot;,&quot;webRelativeListUrl&quot;:&quot;/IT Operations Gallery&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;IT Operations Gallery&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
           </pnp:Sections>
         </pnp:ClientSidePage>
         <pnp:ClientSidePage PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Title="Procedures" ThumbnailUrl="" PageName="Procedures.aspx">
-          <pnp:Header Type="Default" LayoutType="CutInShape" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
           <pnp:Sections>
             <pnp:Section Order="1" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;9267465c-d232-4694-bb18-62513a1b7487&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Procedures&quot;,&quot;selectedZone&quot;:&quot;Subtitles&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;9267465c-d232-4694-bb18-62513a1b7487&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Procedures&quot;,&quot;selectedZone&quot;:&quot;Subtitles&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="2" Type="TwoColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;5f0b8465-cbad-478c-adfb-14c1413041a1&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Procedures&quot;,&quot;selectedZone&quot;:&quot;Change Request Procedure&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;2756bcf3-f8d8-42ff-b9ce-ec8f604c2d20&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Procedures&quot;,&quot;selectedZone&quot;:&quot;Authorizations&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="2" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;5f0b8465-cbad-478c-adfb-14c1413041a1&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Procedures&quot;,&quot;selectedZone&quot;:&quot;Change Request Procedure&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;2756bcf3-f8d8-42ff-b9ce-ec8f604c2d20&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Procedures&quot;,&quot;selectedZone&quot;:&quot;Authorizations&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="2" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="3" Type="TwoColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;0ed013fc-b66f-43a2-af88-06cf2b66e8a7&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Procedures&quot;,&quot;selectedZone&quot;:&quot;User Onboarding&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;05e6c0ad-2964-4450-b0f4-e986c2630103&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Procedures&quot;,&quot;selectedZone&quot;:&quot;User Offboarding&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="2" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;0ed013fc-b66f-43a2-af88-06cf2b66e8a7&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Procedures&quot;,&quot;selectedZone&quot;:&quot;User Onboarding&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;05e6c0ad-2964-4450-b0f4-e986c2630103&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Procedures&quot;,&quot;selectedZone&quot;:&quot;User Offboarding&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="2" />
               </pnp:Controls>
             </pnp:Section>
           </pnp:Sections>
         </pnp:ClientSidePage>
         <pnp:ClientSidePage PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Title="Networking" ThumbnailUrl="" PageName="Networking.aspx">
-          <pnp:Header Type="Default" LayoutType="CutInShape" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
           <pnp:Sections>
             <pnp:Section Order="1" Type="TwoColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;8c19e98a-d6b8-433d-81cb-9d762c1c56d6&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;Display a list from this site.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:ISP Data}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/ISP Data&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/ISP Data&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;ISP Data&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
-                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;4dc01c55-46f6-4aef-822c-d0296768b415&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;Display a list from this site.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:IP Address Schema}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/IP Address Schema&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/IP Address Schema&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;IP Address Schema&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="2" />
+                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;8c19e98a-d6b8-433d-81cb-9d762c1c56d6&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;List&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:ISP Data}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/ISP Data&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/ISP Data&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;ISP Data&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;4dc01c55-46f6-4aef-822c-d0296768b415&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;List&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:IP Address Schema}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/IP Address Schema&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/IP Address Schema&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;IP Address Schema&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="2" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="2" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;f826ad2a-1590-44b4-ade2-034cd0f43128&quot;, &quot;instanceId&quot;: &quot;4bdd90f6-6824-47da-aaf5-822a189c90c7&quot;, &quot;title&quot;: &quot;File Viewer&quot;, &quot;description&quot;: &quot;FileViewer description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;FileViewer&quot;,&quot;documentURL&quot;:&quot;{hosturl}/:p:/s/Site1/ETgsW3gXtFdMkyPnN1CuRoABSNXz6fEv0jdou-yOrjzXnA?e=Ca0b8B&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="f826ad2a-1590-44b4-ade2-034cd0f43128" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;f826ad2a-1590-44b4-ade2-034cd0f43128&quot;, &quot;instanceId&quot;: &quot;3fdf27c4-c4af-45e4-9bf6-3d82f76f7a7d&quot;, &quot;title&quot;: &quot;Custom File Viewer&quot;, &quot;description&quot;: &quot;FileViewer description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;FileViewer&quot;,&quot;selectedLibrary&quot;:&quot;Network Library&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="f826ad2a-1590-44b4-ade2-034cd0f43128" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="3" Type="TwoColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;ed5c5edd-39a9-4f0c-932f-c457adcc1073&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;ZoneContentDisplay description&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Networking&quot;,&quot;selectedZone&quot;:&quot;zone 3&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;id&quot;: &quot;547a2104-e8cb-4667-b64e-d47190d6b2c8&quot;, &quot;instanceId&quot;: &quot;ed5c5edd-39a9-4f0c-932f-c457adcc1073&quot;, &quot;title&quot;: &quot;Zone Content Display&quot;, &quot;description&quot;: &quot;Zone Content Display&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;description&quot;:&quot;ZoneContentDisplay&quot;,&quot;selectedList&quot;:&quot;Networking&quot;,&quot;selectedZone&quot;:&quot;zone 3&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" ControlId="547a2104-e8cb-4667-b64e-d47190d6b2c8" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
           </pnp:Sections>
         </pnp:ClientSidePage>
         <pnp:ClientSidePage PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Title="Systems &amp; Apps" ThumbnailUrl="" PageName="Systems-&amp;-Apps.aspx">
-          <pnp:Header Type="Default" LayoutType="CutInShape" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[&#xD;&#xA;  {&#xD;&#xA;    &quot;id&quot;: &quot;i:0#.f|membership|dpille@mybdodev.onmicrosoft.com&quot;,&#xD;&#xA;    &quot;upn&quot;: &quot;dpille@mybdodev.onmicrosoft.com&quot;,&#xD;&#xA;    &quot;email&quot;: &quot;dpille@mybdodev.onmicrosoft.com&quot;,&#xD;&#xA;    &quot;name&quot;: &quot;Dimple Pille&quot;,&#xD;&#xA;    &quot;role&quot;: &quot;&quot;&#xD;&#xA;  }&#xD;&#xA;]" AuthorByLine="[&#xD;&#xA;  &quot;i:0#.f|membership|dpille@mybdodev.onmicrosoft.com&quot;&#xD;&#xA;]" AuthorByLineId="-1" />
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
           <pnp:Sections>
             <pnp:Section Order="1" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;50493e1b-a8b6-47e1-97a4-1500fcb9ba5a&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;Display a list from this site.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:Systems Inventory}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/Systems Inventory&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/Systems Inventory&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;Systems Inventory&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;50493e1b-a8b6-47e1-97a4-1500fcb9ba5a&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;List&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:Systems Inventory}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/Systems Inventory&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/Systems Inventory&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;Systems Inventory&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
           </pnp:Sections>
         </pnp:ClientSidePage>
         <pnp:ClientSidePage PromoteAsNewsArticle="false" PromoteAsTemplate="false" Overwrite="true" Title="IT Service Catalogue" ThumbnailUrl="" PageName="IT-Service-Catalog.aspx">
-          <pnp:Header Type="Default" LayoutType="CutInShape" TextAlignment="Center" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
+          <pnp:Header Type="Default" LayoutType="FullWidthImage" ShowTopicHeader="false" ShowPublishDate="false" TopicHeader="" AlternativeText="" Authors="[]" AuthorByLine="[]" AuthorByLineId="-1" />
           <pnp:Sections>
             <pnp:Section Order="1" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;a8c526f6-91d5-4f39-8f2a-23f1c05af673&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;Display a list from this site.&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:IT Service Catalogue}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/MP  IT Service Catalogue&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/MP  IT Service Catalogue&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;IT Service Catalogue&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="List" JsonControlData="{&quot;id&quot;: &quot;f92bf067-bc19-489e-a556-7fe95f508720&quot;, &quot;instanceId&quot;: &quot;a8c526f6-91d5-4f39-8f2a-23f1c05af673&quot;, &quot;title&quot;: &quot;List&quot;, &quot;description&quot;: &quot;List&quot;, &quot;dataVersion&quot;: &quot;1.0&quot;, &quot;properties&quot;: {&quot;isDocumentLibrary&quot;:false,&quot;selectedListId&quot;:&quot;{listid:IT Service Catalogue}&quot;,&quot;selectedListUrl&quot;:&quot;{site}/Lists/MP  IT Service Catalogue&quot;,&quot;webRelativeListUrl&quot;:&quot;/Lists/MP  IT Service Catalogue&quot;,&quot;webpartHeightKey&quot;:4}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;listTitle&quot;:&quot;IT Service Catalogue&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {&quot;filterBy&quot;:{}}}" ControlId="f92bf067-bc19-489e-a556-7fe95f508720" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
           </pnp:Sections>
         </pnp:ClientSidePage>
       </pnp:ClientSidePages>
-      <pnp:Header Layout="Compact" MenuStyle="MegaMenu" />
-      <pnp:Footer Enabled="true" Logo="" RemoveExistingNodes="true" />
+      <pnp:Header Layout="Compact" MenuStyle="MegaMenu" ShowSiteTitle="false" ShowSiteNavigation="false" />
+      <pnp:Footer Enabled="true" Logo="" RemoveExistingNodes="false" />
     </pnp:ProvisioningTemplate>
   </pnp:Templates>
 </pnp:Provisioning>

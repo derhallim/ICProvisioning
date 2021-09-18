@@ -6,7 +6,7 @@ Param(
 
 BEGIN {
     try {
-        $ConfigString = Get-Content "C:\Dimple\ClouDev-AusPost-LMS-Updated\Derhalli\Deployment\Deployment\Config.xml" -EA Stop
+        $ConfigString = Get-Content .\Config.xml -EA Stop
         [xml]$Config = $ConfigString.Replace('&', '&amp;')
     }
     catch {
@@ -17,7 +17,7 @@ BEGIN {
     try {
 
         $creds = New-Object System.Management.Automation.PSCredential $Config.Parameters.AdminAccount, $AdminPassword
-        Connect-PnPOnline -Url $Config.Parameters.TemplateUrl  -Credentials $creds -EA Stop
+        Connect-PnPOnline -Url $Config.Parameters.TenantAdmin  -Credentials $creds -EA Stop
 
        $realm = Get-PnPAuthenticationRealm -EA Stop
     }
@@ -41,11 +41,22 @@ PROCESS {
     ##For applying the template
 
    try {
-       Invoke-PnPSiteTemplate -Path $Config.Parameters.ExtractedTemplatePath -EA Stop
+       Write-Host "Creating " $Config.Parameters.SiteTitle " site collection" -ForegroundColor Yellow
+       New-PnPSite -Type CommunicationSite -Title $Config.Parameters.SiteTitle -Url $Config.Parameters.SiteUrl
+       Start-Sleep -s 60
+       Write-Host $Config.Parameters.SiteTitle " site collection created" -ForegroundColor Green
+
+       Write-Host "Connecting to the new site collection" -ForegroundColor White
+       $creds = New-Object System.Management.Automation.PSCredential $Config.Parameters.AdminAccount, $AdminPassword
+       Connect-PnPOnline -Url $Config.Parameters.SiteUrl  -Credentials $creds -EA Stop
+
+       Write-Host "Applying the PnP Template to the site collection" -ForegroundColor Yellow
+       Invoke-PnPSiteTemplate -Path .\PnPTemplate.xml -EA Stop
+       Write-Host "PnP Template applied to the site collection" -ForegroundColor Green
    }
    
    catch {
-       Write-Host   "Failed to Create Sites with Init.xml Templates" -ForegroundColor Red
+       Write-Host   "Failed to Create Site and applying template" -ForegroundColor Red
        Write-Host   $_.Exception.Message -ForegroundColor Red
    }
 
@@ -106,7 +117,7 @@ PROCESS {
        }
        [PSCustomObject]@{
            Title = 'Authorizations';
-           Content = '<div class="ExternalClass649CF70A9BF346DE9DB8FB3F1E92A8F2"><div style="font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(0, 0, 0);"><span style="color&#58;black;"></span><span style="color&#58;black;font-size&#58;16pt;"><b>Authorizations</b></span><br></div></div>'
+           Content = '<div class="ExternalClass649CF70A9BF346DE9DB8FB3F1E92A8F2"><div style="font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(0, 0, 0);"><span style="color&#58;black;"></span><span style="color&#58;black;font-size&#58;16pt;"><b>Authorizations<div style="margin-top&#58;21.3333px;margin-bottom&#58;21.3333px;"><table style="border-collapse&#58;collapse;border&#58;none;"> <tbody><tr style="height&#58;25.95pt;">  <td width="184" style="width&#58;138.25pt;border&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;25.95pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;"><b>&#160;</b></p>  </td>  <td width="208" style="width&#58;156.1pt;border&#58;solid windowtext 1.0pt;border-left&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;25.95pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;"><b>Name</b></p>  </td> </tr> <tr style="height&#58;40.9pt;">  <td width="184" style="width&#58;138.25pt;border&#58;solid windowtext 1.0pt;border-top&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;40.9pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;"><b>Purchases  (Licenses and Hardware)</b></p>  </td>  <td width="208" style="width&#58;156.1pt;border-top&#58;none;border-left&#58;none;border-bottom&#58;solid windowtext 1.0pt;border-right&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;40.9pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;"><b>&#160;</b></p>  </td> </tr> <tr style="height&#58;25.95pt;">  <td width="184" style="width&#58;138.25pt;border&#58;solid windowtext 1.0pt;border-top&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;25.95pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;"><b>User  Creation/Deletion</b></p>  </td>  <td width="208" style="width&#58;156.1pt;border-top&#58;none;border-left&#58;none;border-bottom&#58;solid windowtext 1.0pt;border-right&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;25.95pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;"><b>&#160;</b></p>  </td> </tr> <tr style="height&#58;24.5pt;">  <td width="184" style="width&#58;138.25pt;border&#58;solid windowtext 1.0pt;border-top&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;24.5pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;"><b>Password  Reset</b></p>  </td>  <td width="208" style="width&#58;156.1pt;border-top&#58;none;border-left&#58;none;border-bottom&#58;solid windowtext 1.0pt;border-right&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;24.5pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;"><b>&#160;</b></p>  </td> </tr></tbody></table><br></div></b></span><br></div></div>'
        }
        [PSCustomObject]@{
            Title = 'User Onboarding';
@@ -136,30 +147,76 @@ PROCESS {
     Write-Host   $_.Exception.Message -ForegroundColor Red
    }
 
-   Write-Host "Permissions provisioning to Site Pages" -ForegroundColor Yellow
-   ##Get Owners group Title
-   $OwnersGroupTitle = ""
-   $MembersGroupTitle = ""
-   $VisitorsGroupTitle = ""
-   $AllGroups = Get-PnPGroup
-   for($i =0; $i -lt $AllGroups.Length; $i++) 
-   { 
-       if($AllGroups[$i].Title -match "Owners")
-       { 
-           $OwnersGroupTitle = $AllGroups[$i].Title 
-        } 
-        if($AllGroups[$i].Title -match "Members")
-       { 
-           $MembersGroupTitle = $AllGroups[$i].Title 
+    ##Adding items to the Networking list
+    $NetworkingItem = @(
+        [PSCustomObject]@{
+            Title = 'zone 3';
+            Content = '<div class="ExternalClass03B7B1721D884E3B9C295242E8AA725D"><div style="font-family&#58;Calibri, Arial, Helvetica, sans-serif;font-size&#58;11pt;color&#58;rgb(0, 0, 0);"><span style="color&#58;black;"><table style="border-collapse&#58;collapse;border&#58;none;"> <tbody><tr style="height&#58;20.45pt;">  <td width="127" style="width&#58;95.45pt;border&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;20.45pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">VPN Type</p>  </td>  <td width="255" style="width&#58;191.45pt;border&#58;solid windowtext 1.0pt;border-left&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;20.45pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">&#160;</p>  </td> </tr> <tr style="height&#58;19.3pt;">  <td width="127" style="width&#58;95.45pt;border&#58;solid windowtext 1.0pt;border-top&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;19.3pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">URL</p>  </td>  <td width="255" style="width&#58;191.45pt;border-top&#58;none;border-left&#58;none;border-bottom&#58;solid windowtext 1.0pt;border-right&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;19.3pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">&#160;</p>  </td> </tr> <tr style="height&#58;20.45pt;">  <td width="127" style="width&#58;95.45pt;border&#58;solid windowtext 1.0pt;border-top&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;20.45pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">Username</p>  </td>  <td width="255" style="width&#58;191.45pt;border-top&#58;none;border-left&#58;none;border-bottom&#58;solid windowtext 1.0pt;border-right&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;20.45pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">&#160;</p>  </td> </tr> <tr style="height&#58;19.3pt;">  <td width="127" style="width&#58;95.45pt;border&#58;solid windowtext 1.0pt;border-top&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;19.3pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">Password</p>  </td>  <td width="255" style="width&#58;191.45pt;border-top&#58;none;border-left&#58;none;border-bottom&#58;solid windowtext 1.0pt;border-right&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;19.3pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">&#160;</p>  </td> </tr> <tr style="height&#58;20.45pt;">  <td width="127" style="width&#58;95.45pt;border&#58;solid windowtext 1.0pt;border-top&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;20.45pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">Software</p>  </td>  <td width="255" style="width&#58;191.45pt;border-top&#58;none;border-left&#58;none;border-bottom&#58;solid windowtext 1.0pt;border-right&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;20.45pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">&#160;</p>  </td> </tr> <tr style="height&#58;19.3pt;">  <td width="127" style="width&#58;95.45pt;border&#58;solid windowtext 1.0pt;border-top&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;19.3pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">Token  Location</p>  </td>  <td width="255" style="width&#58;191.45pt;border-top&#58;none;border-left&#58;none;border-bottom&#58;solid windowtext 1.0pt;border-right&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;19.3pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">&#160;</p>  </td> </tr> <tr style="height&#58;20.45pt;">  <td width="127" style="width&#58;95.45pt;border&#58;solid windowtext 1.0pt;border-top&#58;none;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;20.45pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">Notes</p>  </td>  <td width="255" style="width&#58;191.45pt;border-top&#58;none;border-left&#58;none;border-bottom&#58;solid windowtext 1.0pt;border-right&#58;solid windowtext 1.0pt;padding&#58;0in 5.4pt 0in 5.4pt;height&#58;20.45pt;">  <p style="margin&#58;0in 0in 8pt;line-height&#58;107%;font-size&#58;11pt;font-family&#58;Calibri, sans-serif;margin-bottom&#58;0in;line-height&#58;normal;">&#160;</p>  </td> </tr></tbody></table></span><br></div></div>'
         }
-        if($AllGroups[$i].Title -match "Visitors")
-       { 
-           $VisitorsGroupTitle = $AllGroups[$i].Title 
+        [PSCustomObject]@{
+            Title = 'zone 1';
+            Content = ''
         }
-    }
+    )
+ 
     try{
+     
+     Write-Host "Adding items to the Networking list" -ForegroundColor Yellow
+     $batch = New-PnPBatch
+     for($i=0; $i -lt $NetworkingItem.Length ;$i++)
+     {
+         Add-PnPListItem -List "Networking" -Values @{"Title"= $NetworkingItem.Title[$i] ; "Content" = $NetworkingItem.Content[$i]} -Batch $batch
+     }
+     Invoke-PnPBatch -Batch $batch
+ 
+     Write-Host "Items added to the Networking list" -ForegroundColor Green
+ 
+    }
+    catch {
+     Write-Host   "Failed to add items to Networking list" -ForegroundColor Red
+     Write-Host   $_.Exception.Message -ForegroundColor Red
+    }
 
-        #Provision permission to admin account and remove other permissions
+   ##Uploading file to document libraries
+   try{
+    Write-Host "Uploading visio file to document libraries"
+
+    Add-PnPFile -Path .\Match-Invoice-Process-Flow-Chart.vsd -Folder "Network Library" 
+    Add-PnPFile -Path .\Match-Invoice-Process-Flow-Chart.vsd -Folder "Home Library" 
+
+    Write-Host "Uploaded visio file to document libraries"
+   }
+   catch {
+    Write-Host   "Failed to add items to Procedures list" -ForegroundColor Red
+    Write-Host   $_.Exception.Message -ForegroundColor Red
+   }
+
+  
+   try{
+        ##Get Owners group Title
+        $OwnersGroupTitle = ""
+        $MembersGroupTitle = ""
+        $VisitorsGroupTitle = ""
+        $AllGroups = Get-PnPGroup
+        for($i =0; $i -lt $AllGroups.Length; $i++) 
+        { 
+            if($AllGroups[$i].Title -match "Owners")
+            { 
+                $OwnersGroupTitle = $AllGroups[$i].Title 
+                } 
+                if($AllGroups[$i].Title -match "Members")
+            { 
+                $MembersGroupTitle = $AllGroups[$i].Title 
+                }
+                if($AllGroups[$i].Title -match "Visitors")
+            { 
+                $VisitorsGroupTitle = $AllGroups[$i].Title 
+                }
+            }
+    
+        Write-Host "Permissions provisioning to Site Pages" -ForegroundColor Yellow
+
+        #Provision permission to site pages
         for($j = 2; $j -lt 7; $j++){
                 Set-PnPListItemPermission -List 'Site Pages' -Identity $j -ClearExisting -Group $OwnersGroupTitle
                 Set-PnPListItemPermission -List 'Site Pages' -Identity $j -Group $OwnersGroupTitle -AddRole $Config.Parameters.FullControlPermission

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "zone-content-display-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/zoneContentDisplay/ZoneContentDisplayWebPart.js",
+          "manifest": "./src/webparts/zoneContentDisplay/ZoneContentDisplayWebPart.manifest.json"
+        }
+      ]
+    },
+    "file-viewer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/fileViewer/FileViewerWebPart.js",
+          "manifest": "./src/webparts/fileViewer/FileViewerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ZoneContentDisplayWebPartStrings": "lib/webparts/zoneContentDisplay/loc/{locale}.js",
+    "FileViewerWebPartStrings": "lib/webparts/fileViewer/loc/{locale}.js"
+  }
+}
