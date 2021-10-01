@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0"?>
 <Parameters>
-    <TenantAdmin>https://mybdodev-admin.sharepoint.com</TenantAdmin>
-    <AdminAccount>dpille@mybdodev.onmicrosoft.com</AdminAccount>
-    <SiteUrl>https://mybdodev.sharepoint.com/sites/adiddas</SiteUrl>
-    <SiteTitle>adiddas</SiteTitle>
+    <TenantAdmin>https://brsupport-admin.sharepoint.com</TenantAdmin>
+    <AdminAccount>admin@brsupport.onmicrosoft.com</AdminAccount>
+    <SiteUrl>https://brsupport.sharepoint.com/sites/IIM1</SiteUrl>
+    <SiteTitle>IIM1</SiteTitle>
     <FullControlPermission>Full Control</FullControlPermission>
     <ReadPermission>Read</ReadPermission>
 </Parameters>

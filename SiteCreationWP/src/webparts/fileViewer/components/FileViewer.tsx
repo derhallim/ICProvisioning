@@ -32,7 +32,7 @@ export default class FileViewer extends React.Component<IFileViewerProps, IFileV
 
   private GetLibraryFileUrl(): any {
     oldSelectedLibrary = this.props.selectedLibrary;
-    var url = `${this.props.siteAbsoluteURL}/_api/web/lists/getbytitle('${this.props.selectedLibrary}')/items?$select=*&$orderby=Modified desc&$top=1`;
+    var url = `${this.props.siteAbsoluteURL}/_api/web/lists/getbytitle('${this.props.selectedLibrary}')/items?$select=*&$filter=Status eq 'Active'&$orderby=Modified desc&$top=1`;
 
     fetch(url, {
       credentials: 'same-origin',

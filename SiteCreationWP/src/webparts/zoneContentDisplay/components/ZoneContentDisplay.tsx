@@ -58,7 +58,7 @@ export default class ZoneContentDisplay extends React.Component<IZoneContentDisp
       <div className={styles.zoneContentDisplay}>
         <div className={styles.container}>
           <div className={styles.row}>
-            <div className={styles.column}>
+            <div>
               <div>
                 <p dangerouslySetInnerHTML={{ __html: this.state.zoneContent }}></p>
               </div>
