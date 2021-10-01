@@ -1,10 +1,10 @@
 [CmdletBinding()]
 Param(
-    [Parameter(Mandatory = $true)]
-    [SecureString]$AdminPassword,
+    [Parameter(Mandatory = $false)]
+    [string]$IncludeContent,
 
-    [Parameter(Mandatory = $true, ParameterSetName="IncludeContent")]
-    [string]$IncludeContent?
+    [Parameter(Mandatory = $true)]
+    [SecureString]$AdminPassword
 )
 
 BEGIN {
@@ -64,7 +64,7 @@ PROCESS {
    }
 
 #    $IncludeListContent = Write-Host  "Do you want to include the content? If yes, then please type 'Yes' or else type 'No'"
-   if($IncludeContent? -eq 'Yes'){
+   if($IncludeContent.ToLower() -eq 'includecontent'){
 
    ##Add Ittems to the It Operations list
 
