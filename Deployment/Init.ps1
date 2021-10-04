@@ -1,10 +1,8 @@
 [CmdletBinding()]
 Param(
-    [Parameter(Mandatory = $false)]
-    [string]$IncludeContent,
-
     [Parameter(Mandatory = $true)]
-    [SecureString]$AdminPassword
+    [SecureString]$AdminPassword,
+    [switch]$IncludeContent
 )
 
 BEGIN {
@@ -20,7 +18,7 @@ BEGIN {
     try {
 
         $creds = New-Object System.Management.Automation.PSCredential $Config.Parameters.AdminAccount, $AdminPassword
-        Connect-PnPOnline -Url $Config.Parameters.TenantAdmin  -Credentials $creds -EA Stop
+        Connect-PnPOnline -Url $Config.Parameters.TenantAdmin -Interactive # -Credentials $creds -EA Stop
 
        $realm = Get-PnPAuthenticationRealm -EA Stop
     }
@@ -51,7 +49,7 @@ PROCESS {
 
        Write-Host "Connecting to the new site collection" -ForegroundColor White
        $creds = New-Object System.Management.Automation.PSCredential $Config.Parameters.AdminAccount, $AdminPassword
-       Connect-PnPOnline -Url $Config.Parameters.SiteUrl  -Credentials $creds -EA Stop
+       Connect-PnPOnline -Url $Config.Parameters.SiteUrl -Interactive #-Credentials $creds -EA Stop
 
        Write-Host "Applying the PnP Template to the site collection" -ForegroundColor Yellow
        Invoke-PnPSiteTemplate -Path .\Template\PnPTemplate.xml -EA Stop
@@ -64,8 +62,8 @@ PROCESS {
    }
 
 #    $IncludeListContent = Write-Host  "Do you want to include the content? If yes, then please type 'Yes' or else type 'No'"
-   if($IncludeContent.ToLower() -eq 'includecontent'){
-
+   if($IncludeContent){
+   write-host "Content Included"
    ##Add Ittems to the It Operations list
 
    $ITOperationsItems = @(
