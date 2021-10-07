@@ -44,7 +44,7 @@ PROCESS {
    try {
        Write-Host "Creating " $Config.Parameters.SiteTitle " site collection" -ForegroundColor Yellow
        New-PnPSite -Type CommunicationSite -Title $Config.Parameters.SiteTitle -Url $Config.Parameters.SiteUrl
-       Start-Sleep -s 60
+       Start-Sleep -s 120
        Write-Host $Config.Parameters.SiteTitle " site collection created" -ForegroundColor Green
 
        Write-Host "Connecting to the new site collection" -ForegroundColor White
@@ -52,7 +52,7 @@ PROCESS {
        Connect-PnPOnline -Url $Config.Parameters.SiteUrl -Interactive #-Credentials $creds -EA Stop
 
        Write-Host "Applying the PnP Template to the site collection" -ForegroundColor Yellow
-       Invoke-PnPSiteTemplate -Path .\Template\PnPTemplate.xml -EA Stop
+       Invoke-PnPSiteTemplate -Path .\Template\pnpTemplate_v2.xml -EA Stop
        Write-Host "PnP Template applied to the site collection" -ForegroundColor Green
    }
    
@@ -118,6 +118,7 @@ PROCESS {
         Add-PnPListItem -List "IT Operations" -Values @{"Title"= $ITOperationsItems.Title[$i] ; "Content" = $ITOperationsItems.Content[$i]} -Batch $batch
     }
     Invoke-PnPBatch -Batch $batch
+    Start-Sleep -s 120
 
     Write-Host "Items added to the IT Operations list" -ForegroundColor Green
 
@@ -160,6 +161,7 @@ PROCESS {
         Add-PnPListItem -List "Procedures" -Values @{"Title"= $ProceduresItem.Title[$i] ; "Content" = $ProceduresItem.Content[$i]} -Batch $batch
     }
     Invoke-PnPBatch -Batch $batch
+    Start-Sleep -s 120
 
     Write-Host "Items added to the Procedures list" -ForegroundColor Green
 
@@ -190,6 +192,7 @@ PROCESS {
          Add-PnPListItem -List "Networking" -Values @{"Title"= $NetworkingItem.Title[$i] ; "Content" = $NetworkingItem.Content[$i]} -Batch $batch
      }
      Invoke-PnPBatch -Batch $batch
+     Start-Sleep -s 120
  
      Write-Host "Items added to the Networking list" -ForegroundColor Green
  
@@ -206,8 +209,8 @@ PROCESS {
 
     Add-PnPFile -Path '.\Template\Shared Documents\MP-PerimeterNetworkDiagram2.vsdx' -Folder "Network Library"  
     Add-PnPFile -Path '.\Template\Shared Documents\MP-Azure-O365 EndState.vsdx' -Folder "Home Library" 
-    Add-PnPFile -Path .\Template\SiteAssets\__footerlogo__IC-360-Logo-V-1clr-Inverse.png -Folder "SiteAssets" 
 
+    Start-Sleep -s 120
     Write-Host "Uploaded visio file to document libraries"
    }
    catch {
@@ -253,6 +256,7 @@ PROCESS {
         }
 
         Set-PnPPage -Identity "Home" -Publish
+        Start-Sleep -s 120
 
         Write-Host "Permission provisioned to all the Site Pages and Published them" -ForegroundColor Green
     }
